@@ -120,6 +120,7 @@ pre {
 .people-pic {
   max-width: 125px;
   max-height: 125px;
+  border-radius:50%;
 }
 
 .people-name {
