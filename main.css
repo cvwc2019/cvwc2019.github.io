@@ -1,11 +1,12 @@
 body {
   font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.43;
   font-weight: 400;
   /* -webkit-font-smoothing: subpixel-antialiased; */
   color: #333;
   padding-top: 70px;
+  background-color: #FCFCFC;
 }
 
 body *::selection {
