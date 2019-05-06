@@ -1,8 +1,9 @@
 body {
+  font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 1.43;
   font-weight: 400;
-  -webkit-font-smoothing: subpixel-antialiased;
+  /* -webkit-font-smoothing: subpixel-antialiased; */
   color: #333;
   padding-top: 70px;
 }
@@ -30,7 +31,8 @@ body *::selection {
 
 h1,h2,h3 {
   color: #1a1a1a;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 h1 {
