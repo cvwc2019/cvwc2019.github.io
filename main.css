@@ -16,6 +16,12 @@ body *::selection {
   max-width: 980px;
 }
 
+.image_container>img{
+  width:45%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 .top-strip {
   background-color: #000;
   height: 0.25em;

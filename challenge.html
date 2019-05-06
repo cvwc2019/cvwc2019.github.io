@@ -20,10 +20,10 @@
       <div class="navbar-collapse collapse" id="navbar-main">
         <ul class="nav navbar-nav">
           <li><a href="./index.html#intro">Introduction</a></li>
-          <li><a href="./index.html#organizers">Organizers</a></li>
+          <!-- <li><a href="./index.html#organizers">Organizers</a></li>
           <li><a href="./index.html#speakers">Invited Speakers</a></li>
           <li><a href="./index.html#news">News</a></li>
-          <li><a href="./index.html#dates">Important Dates</a></li>
+          <li><a href="./index.html#dates">Important Dates</a></li> -->
           <li><a href="./challenge.html">Challenges</a></li>
           <li><a href="./cfp.html">Call for Papers</a></li>
           <!-- <li><a href="./program.html">Program</a></li> -->
@@ -34,6 +34,11 @@
   </div>
 
   <div class="container">
+    <div class="col-xs-12 image_container">
+      <img src="./imgs/det_1.jpg"/> <img src="./imgs/det_3.jpg"/>
+      <img src="./imgs/pose_3.jpg"/> <img src="./imgs/pose_4.jpg"/>
+      <!-- <img src="./imgs/det_3.jpg"/> <img src="./imgs/det_4.jpg"/> -->
+    </div>
     <div class="row">
       <div class="col-xs-12">
         <h2>Overview</h2>
@@ -49,6 +54,50 @@
         </p>
         <p><b>Requirement:</b> Due to the public benefit nature of this workshop, we require each participant team agrees to open source their solution to help wildlife conservation. All participating teams are required to use only our released public available dataset for training, and submit their challenge results as well as full source-code packages for evaluation.
         </p>
+      </div>
+
+      <!-- <div class="col-xs-12 image_container">
+        <img src="./imgs/pose_1.jpg"/> <img src="./imgs/pose_2.jpg"/>
+        <img src="./imgs/pose_3.jpg"/> <img src="./imgs/pose_4.jpg"/>
+      </div> -->
+      <div class="col-xs-12">
+        <table style="width:100%;border-bottom:solid 2px">
+          <thead style="border-bottom:solid 2px;border-top:solid 2px">
+            <tr>
+              <th>Datasets</th>
+              <th> <b>ATRW</b> </th>
+              <th>[1,2]</th>
+              <th>C-Zoo[3]</th>
+              <th>C-Tai[3]</th>
+              <th>TELP[4]</th>
+              <th>α-whale[5]</th>
+            </tr>
+          </thead>
+          <tr>
+            <th>Target</th><td> Tiger </td><td> Tiger </td><td> Chimpanzees </td><td> Chimpanzees </td><td> Elephant </td><td> Whale</td>
+          </tr>
+          <tr>
+            <th>Wild</th><td>√</td><td> √ </td><td> × </td><td>×  </td><td>× </td><td> √</td>
+          </tr>
+          <tr>
+            <th>Pose annotation  </th><td>√</td><td> × </td><td>×</td><td>×  </td><td>× </td><td> ×</td>
+          </tr>
+          <tr>
+            <th>#Images or #Clips   </th><td> 8,076* </td><td> 278   </td><td> 2,109  </td><td> 5,078  </td><td> 2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#BBoxes</th><td> 9,496 </td><td> 278   </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#BBoxes with ID</th><td>  3,649</td><td> 278 </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#identities  </th><td>  92   </td><td> 278   </td><td> 24     </td><td> 78    </td><td>  276   </td><td> 38</td>
+          </tr>
+          <tr>
+            <th>#BBoxes/ID   </th><td>  39.7 </td><td> 1     </td><td> 19.9   </td><td> 9.7   </td><td>  20.5  </td><td> 24.3</td>
+          </tr>
+        </table>
       </div>
     </div>
     <p><br /></p>
@@ -71,6 +120,38 @@
         </p>
         <p>
           <b>Tiger Re-ID in the wild</b>: This track will evaluate the accuracy of tiger re-identification in wild with fully automatic pipeline. To simulate the real case, none annotation is given out . With all raw images (in test set) given, teams should automaticly detect tigers in those images to form the gallary and query. Both mAP and rank-1 accuracy will be used to evaluate the accuracy of different models.
+        </p>
+      </div>
+    </div>
+    <p><br /></p>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Dates</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>
+          To be released.
+        </p>
+      </div>
+    </div>
+    <p><br /></p>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>References</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>
+        <span>[1] K Ullas Karanth, James D Nichols, N Samba Kumar, et al.2004. Tigers and theirprey: predicting carnivore densities from prey abundance.PNAS101, 14 (2004),4854–4858.</span><br>
+        <span>[2] K Ullas Karanth, James D Nichols, N Samba Kumar, and James E Hines. 2006.Assessing tiger population dynamics using photographic capture–recapturesampling.Ecology87, 11 (2006), 2925–2937.</span><br>
+        <span>[3] Alexander Freytag, Erik Rodner, Marcel Simon, Alexander Loos, et al.2016.Chimpanzee faces in the wild: Log-euclidean cnns for predicting identities andattributes of primates. InGerman Conference on Pattern Recognition.</span><br>
+        <span>[4] Matthias Körschens, Björn Barz, and Joachim Denzler. 2018. Towards automaticidentification of elephants in the wild.arXiv preprint arXiv:1812.04418(2018).</span><br>
+        <span>[5] Andrei Polzounov, Ilmira Terpugova, Deividas Skiparis, and Andrei Mihai. 2016.Right whale recognition using convolutional neural networks.arXiv preprintarXiv:1604.05605(2016).</span><br>
         </p>
       </div>
     </div>
