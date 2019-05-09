@@ -39,11 +39,11 @@
     <div class="row">
       <div class="col-xs-12">
         <p>
-          The challenge will take Amur tiger conservation as an example to explore the usages of CV techniques for endangered wildlife conservation. The Amur tiger (also known as Siberian tiger, Northeast-China tiger) is a tiger population in the Far East region (particularly the Russian Far East and Northeast China). It currently has about 600 wild individuals in the world, so that the conservation of Amur tiger is of crucial importance.
+          The challenge will explore the use of CV techniques for endangered wildlife conservation, specifically focusing on the Amur tiger, also known as Siberian tiger or the Northeast-China tiger.  The Amur tiger population is concentrated in the Far East, particularly the Russian Far East and Northeast China. The remaining wild population is estimated to be 600 individuals, so conservation is of crucial importance.
         </p>
-<p><u>Dataset:</u> With the help of WWF and 3rd party vendors, we collected the ATRW (Amur Tiger Re-identification in the Wild) dataset,
-        which contains more than 8,000 Amur tiger video clips from 92 individuals collected from ~10 zoos in China, with bounding-box, keypoint based pose and identity annotations for sampled video frames. <span style='color: #0000FF'>Figure 1</span> illustrates some example bbox and pose keypoint annotations in our ATRW dataset.
-        Our dataset is the largest wildlife re-ID dataset up-to-date, <span style='color: #0000FF'>Table 1</span> lists a comparison of current wildlife re-ID dataset.
+<p><u>Dataset:</u> With the help of WWF and third-party vendors, we collected the ATRW (Amur Tiger Re-identification in the Wild) dataset,
+        which contains more than 8,000 Amur tiger video clips from 92 individuals collected from ~10 zoos in China, with bounding-box, keypoint-based pose, and identity annotations for sampled video frames. <span style='color: #0000FF'>Figure 1</span> illustrates some example bounding box and pose keypoint annotations in our ATRW dataset.
+        Our dataset is the largest wildlife re-ID dataset to date, <span style='color: #0000FF'>Table 1</span> lists a comparison of current wildlife re-ID datasets.
         The dataset will be divided into training, validation, and testing subsets.
         The training/validation subsets along with annotations will be released to public, with the annotations for the test subset withheld by the organizers.
         </p>
@@ -52,7 +52,7 @@
       <img src="./imgs/pose_3.jpg"/> <img src="./imgs/pose_4.jpg"/>
       <!-- <img src="./imgs/det_3.jpg"/> <img src="./imgs/det_4.jpg"/> -->
     </div>
-    <center>Figure 1. Illustration of bounding-box and pose keypoint annotations in our ATRW dataset.</center>
+    <center>Figure 1. Illustration of bounding box and pose keypoint annotations in our ATRW dataset.</center>
     <p><br /> </p>
      <div class="col-xs-12">
         <table style="width:100%;border-bottom:solid 2px">
@@ -95,7 +95,7 @@
     </div>
     <center>Table 1. Comaprison of current wildlife re-ID datasets.</center>
     <p><br /> </p>
-        <p><u>Requirement:</u> Due to the public benefit nature of this workshop, we require each participant team agrees to open source their solution to help wildlife conservation. All participating teams are required to use only our released public available dataset for training, and submit their challenge results as well as full source-code packages for evaluation.
+        <p><u>Requirement:</u> We require that participants agree to open-source their solution to support wildlife conservation. All participating teams are required to use only our dataset for training, and submit their challenge results as well as full source-code packages for evaluation.
         </p>
       </div>
     <p><br /></p>
@@ -109,16 +109,16 @@
 <div class="row">
       <div class="col-xs-12">
         <p>
-          <u>Tiger Detection</u>: From images/videos captured by cameras, this task aims to place tight bounding boxes to any tiger targets. As the detection is running on edge-side (smart cameras), both the detection accuracy (in terms of AP) and the runtime-cost are used to measure the quality of the detector.
+          <u>Tiger Detection</u>: From images/videos captured by cameras, this task aims to place tight bounding boxes around tigers. As the detection may run on the edge (smart cameras), both the detection accuracy (in terms of AP) and the runtime cost are used to measure the quality of the detector.
         </p>
         <p>
-          <u>Tiger Pose Detection</u>: From images/videos with detected tiger bounding-box, this task aims to estimate tiger pose (i.e., keypoint landmarks) for tiger image alignment/normalization, so that pose variations are removed or alleviated in the tiger re-identification step. We will use mean average precision (mAP) and object keypoint similarity (OKS) to evaluate the performance of teams.
+          <u>Tiger Pose Detection</u>: From images/videos with detected tiger bounding boxes, this task aims to estimate tiger pose (i.e., keypoint landmarks) for tiger image alignment/normalization, so that pose variations are removed or alleviated in the tiger re-identification step. We will use mean average precision (mAP) and object keypoint similarity (OKS) to evaluate submissions.
         </p>
         <p>
-          <u>Tiger Re-ID with human alignment(plain Re-ID)</u>: We define a set of queries and a target database of Amur tigers. Both queries and target in the database are already aligned with bounding-box and pose information. Tiger re-identification aims to find all the database images of the same tiger as the query. Both mAP and rank-1 accuracy will be used to evaluate the accuracy of different models.
+          <u>Tiger Re-ID with Human Alignment (Plain Re-ID)</u>: We define a set of queries and a target database of Amur tigers. Both queries and targets in the database are already annotated with bounding boxes and pose information. Tiger re-identification aims to find all the database images containing the same tiger as the query. Both mAP and rank-1 accuracy will be used to evaluate accuracy.
         </p>
         <p>
-          <u>Tiger Re-ID in the wild</u>: This track will evaluate the accuracy of tiger re-identification in wild with fully automatic pipeline. To simulate the real case, none annotation is given out . With all raw images (in test set) given, teams should automaticly detect tigers in those images to form the gallary and query. Both mAP and rank-1 accuracy will be used to evaluate the accuracy of different models.
+          <u>Tiger Re-ID in the Wild</u>: This track will evaluate the accuracy of tiger re-identification in wild with a fully automated pipeline. To simulate the real use case, no annotations are provided. Submissions should automatically detect and identify tigers in all images in the test set. Both mAP and rank-1 accuracy will be used to evaluate the accuracy of different models.
         </p>
       </div>
      <p><br /></p>
@@ -131,8 +131,8 @@
 </div>
 <div class="row">
       <div class="col-xs-12">
-		<p>The workshop will provide awards for each challenge track winner team thanks to our sponsor generous donation.  
-		Detailed award info will be avaiable soon. </p>
+		<p>The workshop will provide awards for each challenge track winner team thanks to our sponsor's generous donation.  
+		Detailed award info will be available soon. </p>
       </div>
      <p><br /></p>
      <p><br /></p>
@@ -145,7 +145,7 @@
 </div>
 <div class="row">
       <div class="col-xs-12">
-		<p>Evaluation server and detailed protocol will be avaiable soon.</p>
+		<p>Evaluation server and detailed protocol will be available soon.</p>
       </div>
      <p><br /></p>
      <p><br /></p>
@@ -181,9 +181,9 @@
       <div class="col-xs-12">
         <ol>
         <li>K Ullas Karanth, James D Nichols, N Samba Kumar, et al. Tigers and their prey: predicting carnivore densities from prey abundance. PNAS 101, 14 (2004),4854–4858.</li>
-        <li>K Ullas Karanth, James D Nichols, N Samba Kumar, and James E Hines. Assessing tiger population dynamics using photographic capture–recapturesampling. Ecology 87, 11 (2006), 2925–2937.</li>
-        <li>Alexander Freytag, Erik Rodner, Marcel Simon, Alexander Loos, et al. Chimpanzee faces in the wild: Log-euclidean cnns for predicting identities andattributes of primates. In German Conference on Pattern Recognition, 2016.</li>
-        <li>Matthias Körschens, Björn Barz, and Joachim Denzler. Towards automaticidentification of elephants in the wild. arXiv preprint arXiv:1812.04418(2018).</li>
+        <li>K Ullas Karanth, James D Nichols, N Samba Kumar, and James E Hines. Assessing tiger population dynamics using photographic capture–recapture sampling. Ecology 87, 11 (2006), 2925–2937.</li>
+        <li>Alexander Freytag, Erik Rodner, Marcel Simon, Alexander Loos, et al. Chimpanzee faces in the wild: Log-euclidean cnns for predicting identities and attributes of primates. In German Conference on Pattern Recognition, 2016.</li>
+        <li>Matthias Körschens, Björn Barz, and Joachim Denzler. Towards automatic identification of elephants in the wild. arXiv preprint arXiv:1812.04418(2018).</li>
         <li>Andrei Polzounov, Ilmira Terpugova, Deividas Skiparis, and Andrei Mihai. Right whale recognition using convolutional neural networks. arXiv preprint arXiv:1604.05605(2016).</li>
 	    </ol>
       </div>
