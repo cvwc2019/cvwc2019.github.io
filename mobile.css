@@ -138,6 +138,7 @@ pre {
 }
 
 .people-name h6 {
+  display: inline-block;
   margin: 2px 0;
   font-weight: 300;
   font-size: 11px;
