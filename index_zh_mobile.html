@@ -51,7 +51,7 @@
 <p><br /></p>
 <div class="row">
   <div class="col-xs-12">
-    <h2>介绍</h2>
+    <h2>简介</h2>
   </div>
 </div>
 <div class="row">
@@ -59,7 +59,7 @@
     <p>
 保护野生动物对于维持健康和平衡的生态系统以及确保我们世界的持续生物多样性非常重要。 特别地，濒危物种是生物多样性和环境健康的重要指标。 世界各国政府以及WWF（世界自然基金会）等环保组织都投入了大量资源和项目来保护濒危物种。
 </p>
-<p>野生动物保护的关键是监测野生动植物地理空间上地分布，并跟踪种群迁徙。这一基础数据指导了野生动植物保护的资源和战略，并预警可能影响濒危物种的环境变化。越来越多的挑战，例如广泛的活动范围，偷猎，栖息地的丧失以及其他因素，使得追踪野生动物变得越来越困难。幸运的是，计算机视觉技术已经显示出应对这些挑战的潜力，因为我们现在能够从监控相机甚至无人机收集大量图像数据，并使用这些图像构建用于野生动物保护的边缘到云系统。从边缘部署的角度来看，CV技术可以应用于智能成像传感器，以捕获野生动物相关的图像/视频并监控野生动物。由于云系统可以访问更多的计算，我们可以应用更复杂的任务，例如从分布式摄像机的大量照片中重新识别某些野生动物个体，跟踪移动模式，以及跨多个传感器聚合信息。
+<p>幸运的是，计算机视觉技术已经显示出其潜力，因为我们现在能够从监控相机甚至无人机收集大量图像数据，并使用这些图像构建用于野生动物保护的边缘到云系统。从边缘部署的角度来看，CV技术可以应用于智能成像传感器，以捕获野生动物相关的图像/视频并监控野生动物。由于云系统可以访问更多的计算，我们可以应用更复杂的任务，例如从分布式摄像机的大量照片中重新识别某些野生动物个体，跟踪移动模式，以及跨多个传感器聚合信息。
 </p>
 <p>
 本次研讨会旨在加强CV社区的社会责任，并汇集社区研究人员，从3个方面使用CV技术推进野生动物保护：
@@ -73,6 +73,104 @@
 <p><br /></p>
 </div>
 
+<p><br /></p>
+<!--  -->
+<div class="row">
+  <div class="col-xs-12">
+    <h2>征集论文</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      研讨会的话题包括但并不限于：
+      <ul>
+        <li>Fine-grained wildlife recognition</li>
+        <li>Wildlife re-identification</li>
+        <li>Wildlife tracking</li>
+        <li>Smart trap sensor design</li>
+        <li>Drone based monitoring/tracking</li>
+        <li>Simulation and visualization</li>
+        <li>Full conservation system</li>
+        <li>Dataset related to wildlife conservation</li>
+        <li>Challenge solutions</li>
+      </ul>
+      欢迎以下方面的工作进行提交：
+      <ul>
+        <li>贡献论文</li>
+        <li>挑战的解决方案</li>
+        <li>有特色的现有工作</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Challenges</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      基于Amur Tiger Re-identification in Wild (ATRW)数据集，我们举办了包含以下四个track的challenge：
+      <ul>
+        <li>虎类目标检测</li>
+        <li>虎类关键点检测</li>
+        <li>虎类身份重识别</li>
+        <li>野生环境下的虎类重识别</li>
+      </ul>
+      ATRW数据集
+      <div class="image_container">
+        <img src="./imgs/det_1.jpg">
+        <img src="./imgs/pose_4.jpg">
+      </div>
+      <br>
+      <div class="col-xs-12" style="padding:0px">
+        <table style="width:100%;border-bottom:solid 2px;font-size:10px;">
+          <thead style="border-bottom:solid 2px;border-top:solid 2px">
+            <tr>
+              <th>Datasets</th>
+              <th> <u>ATRW</u> </th>
+              <th>[1,2]</th>
+              <th>C-Zoo[3]</th>
+              <th>C-Tai[3]</th>
+              <th>TELP[4]</th>
+              <th>α-whale[5]</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <th>Target</th><td> 老虎 </td><td> 老虎 </td><td> 黑猩猩 </td><td> 黑猩猩 </td><td> 大象 </td><td> 鲸鱼</td>
+          </tr>
+          <tr>
+            <th>Wild</th><td>√</td><td> √ </td><td> × </td><td>×  </td><td>× </td><td> √</td>
+          </tr>
+          <tr>
+            <th>Pose</th><td>√</td><td> × </td><td>×</td><td>×  </td><td>× </td><td> ×</td>
+          </tr>
+          <!-- <tr>
+            <th>#Images or #Clips   </th><td> 8,076* </td><td> 278   </td><td> 2,109  </td><td> 5,078  </td><td> 2,078 </td><td> 924</td>
+          </tr> -->
+          <tr>
+            <th>#BBoxes</th><td> 9,496 </td><td> 278   </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#BBoxes with ID</th><td>  3,649</td><td> 278 </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#ID  </th><td>  92   </td><td> 278   </td><td> 24     </td><td> 78    </td><td>  276   </td><td> 38</td>
+          </tr>
+          <tr>
+            <th>#BBx/ID   </th><td>  39.7 </td><td> 1     </td><td> 19.9   </td><td> 9.7   </td><td>  20.5  </td><td> 24.3</td>
+          </tr>
+        </tbody></table>
+        <br>
+    </div>
+    </p>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-xs-12">
     <h2>组织者</h2>
@@ -82,45 +180,30 @@
 <div class="row">
   <!-- TODO: personal pages and pics -->
   <div class="col-xs-2x">
-    <a href="https://sites.google.com/site/leeplus/" target="_blank">
-      <img class="people-pic" src="./imgs/jgli.jpg" />
-    </a>
     <div class="people-name">
       Jianguo Li
       <h6>Intel Labs</h6>
     </div>
   </div>
   <div class="col-xs-2x">
-    <a href="https://weiyaolin.github.io/" target="_blank">
-      <img class="people-pic" src="./imgs/wylin.jpg" />
-    </a>
     <div class="people-name">
       Weiyao Lin
       <h6>Shanghai JiaoTong University</h6>
     </div>
   </div>
   <div class="col-xs-2x">
-    <a href="https://www.intel.ai/bio/hanlin-tang/" target="_blank">
-      <img class="people-pic" src="./imgs/hltang.png" />
-    </a>
     <div class="people-name">
       Hanlin Tang
       <h6>Intel AI Lab</h6>
     </div>
   </div>
   <div class="col-xs-2x">
-    <a href="http://www.cs.sfu.ca/~mori/research/" target="_blank">
-      <img class="people-pic" src="./imgs/greg_mori.png" />
-    </a>
     <div class="people-name">
       Greg Mori
       <h6>Simon Fraser University</h6>
     </div>
   </div>
   <div class="col-xs-2x">
-    <a href="http://www.inf-cv.uni-jena.de/denzler.html" target="_blank">
-      <img class="people-pic" src="./imgs/denzler.jpg" />
-    </a>
     <div class="people-name" id="speakers">
       Joachim Denzler
       <h6>Friedrich Schiller University Jena</h6>
@@ -137,7 +220,6 @@
 
 <div class="row">
   <div class="col-xs-2x">
-    <a href="http://www.vision.caltech.edu/Perona.html" target="_blank"><img class="people-pic" style="float:left;" src="./imgs/perona.jpg" /></a>
     <div class="people-name">
       Pietro Perona
       <h6>Caltech</h6>
@@ -145,7 +227,6 @@
   </div>
 
   <div class="col-xs-2x">
-    <a href="https://jingdongwang2017.github.io/" target="_blank"><img class="people-pic" style="float:left;" src="./imgs/jdwang.jpg" /></a>
     <div class="people-name">
       Jingdong Wang
       <h6>Microsoft Research Asia</h6>
@@ -153,7 +234,6 @@
   </div>
 
   <div class="col-xs-2x">
-    <a href=""><img class="people-pic" style="float:left;width:125px;height:125px" src="./imgs/avatar.png"/></a>
     <div class="people-name">
       Director (TBD)
       <h6>WWF</h6>
@@ -175,41 +255,12 @@
     <p>
 <ul>
 <li>5月8日: 网站上线.</li>
-<li>5月17日: Challenge paper 上传Arxiv (todo).</li>
+<li>5月24日: Challenge paper 上传Arxiv (todo).</li>
 </ul>
     </p>
   </div>
 </div>
-<p><br /></p>
-<!--  -->
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Call for Papers</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <p>
-      <span style="font-weight:500;">Call for papers:</span>
-      Please refer to the <a href='./cfp.html'>CFP page</a> for call-for-paper and submission information.
-    </p>
-  </div>
-</div>
 
-<p><br /></p>
-<div class="row">
-  <div class="col-xs-12">
-    <h2>Challenges</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <p>
-      <span style="font-weight:500;">Challenges:</span>
-      Please refer to the <a href='./challenge.html'>challenge page</a>.
-    </p>
-  </div>
-</div>
 
 <p><br /></p>
 <div class="row" id="schedule">
@@ -260,6 +311,41 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Advisory Board</h2>
+    <span>Yoshua Bengio, Professor, MILA</span><br>
+    <span>Pietro Perona, Professor, Caltech</span><br>
+    <span>Lucas Joppa, Chief Environmental Officer, Microsoft</span><br>
+  </div>
+</div>
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Program Committee Members</h2>
+    <span>Dan Morris (Microsoft)</span><br>
+    <span>Mac Oisin Aodha (Caltech)</span><br>
+    <span>Sara Beery (Caltech)</span><br>
+    <span>Elizabeth Bondi (University of Southern California)</span><br>
+    <span>Anna Bethke (Intel AI Lab)</span><br>
+    <span>Kristina Kermanshahche (Perspicace Inc)</span><br>
+    <span>Fei Fang (CMU)</span><br>
+    <span>Graham Taylor (University of Guelph)</span><br>
+    <!---<span>Liang Zheng (Australian National University)</span><br> --->
+    <span>Jiwen Lu (Tsinghua University)</span><br>
+    <span>Junliang Xing (CASIA, Chinese Academy of Science)</span><br>
+    <span>Shanshan Zhang (Nanjing University of Science and Technology)</span><br>
+    <span>Tilo Burghardt (University of Bristol)</span><br>
+    <span>Alexander Freytag (Carl Zeiss AG)</span><br>
+    <span>Ergys Ristani (Facebook)</span><br>
+    <span>Michael Ying Yang (University of Twente, Netherland)</span><br>
+    <span>Ning Xu (Adobe Research)</span><br>
+    <span>Xintong Han (Malong Tech)</span><br>
+    <span>Shuyuan Li (SJTU)</span><br>
   </div>
 </div>
 <p><br /></p>

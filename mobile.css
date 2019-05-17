@@ -145,6 +145,7 @@ pre {
 
 .col-xs-2x{
   display: inline-block;
+  margin-right: 10vw;
 }
 
 #sequence {
