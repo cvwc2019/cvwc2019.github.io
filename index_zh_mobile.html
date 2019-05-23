@@ -56,16 +56,17 @@
 <div class="row">
   <div class="col-xs-12">
     <p>
-保护野生动物对于维持健康和平衡的生态系统以及确保我们世界的持续生物多样性非常重要。 特别地，濒危物种是生物多样性和环境健康的重要指标。 世界各国政府以及WWF（世界自然基金会）等环保组织都投入了大量资源和项目来保护濒危物种。
+保护野生动物对于维持健康和平衡的生态系统，以及确保可持续的生物多样性都非常重要。众所周知，濒危物种是生物多样性和环境健康的重要指标。世界各国政府以及类似WWF(世界野生动物基金会)的环保组织都投入了大量资源和项目来保护濒危物种。
 </p>
-<p>幸运的是，计算机视觉技术已经显示出其潜力，因为我们现在能够从监控相机甚至无人机收集大量图像数据，并使用这些图像构建用于野生动物保护的边缘到云系统。从边缘部署的角度来看，CV技术可以应用于智能成像传感器，以捕获野生动物相关的图像/视频并监控野生动物。由于云系统可以访问更多的计算，我们可以应用更复杂的任务，例如从分布式摄像机的大量照片中重新识别某些野生动物个体，跟踪移动模式，以及跨多个传感器聚合信息。
+<p>幸运的是，计算机视觉技术逐渐显示出其巨大潜力。现在能够从监控相机甚至无人机收集大量野生动物相关图像数据，并使用这些数据构建从边缘到云端的野生动物保护系统。从边缘部署的角度来看，计算机视觉技术可以应用于智能监控相机，以获取野生动物相关的图像/视频并监控野生动物。而云端系统有更多的计算资源，可以用于更复杂的任务，例如从分布各地的智能监控相机获取的大量照片中重新识别某些野生动物个体，
+聚合跨传感器信息, 可视化动物的运动轨迹及其运动规律等。
 </p>
 <p>
-本次研讨会旨在加强CV社区的社会责任，并汇集社区研究人员，从3个方面使用CV技术推进野生动物保护：
+本次研讨会旨在加强计算机视觉社区的社会责任，汇集社区研究人员以及野生动物保护研究人员，从三个方面推进计算机视觉在野生动物保护中的应用:
 <ul>
-<li> 欢迎提交在CV领域中有关野生动物保护的论文。</li>
-<li> 基于我们为东北虎保护收集的数据集，组织一次挑战赛，包含虎类检测，姿势估计和重识别等任务。 </li>
-<li> 通过CV社区和传统野生动物保护社区的邀请讲座和小组讨论，培养关于“利用CV技术保护野生动物”的新想法和方向。 </li>
+<li> 欢迎提交基于视觉技术的野生动物保护的相关论文。</li>
+<li> 组织一次东北虎保护相关的挑战赛，包含老虎检测，姿势估计和再识别等任务。 </li>
+<li> 邀请计算机视觉社区和野生动物保护社区相关研究人员做特邀报告，组织专题讨论，培育“计算机视觉技术保护野生动物”的新方法和新方向。 </li>
 </ul>
    </p>
   </div>
@@ -76,13 +77,13 @@
 <!--  -->
 <div class="row">
   <div class="col-xs-12">
-    <h2>征集论文</h2>
+    <h2>论文征集</h2>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
     <p>
-      研讨会的话题包括但并不限于：
+      征集论文的主题包括但并不限于：
       <ul>
         <li>Fine-grained wildlife recognition</li>
         <li>Wildlife re-identification</li>
@@ -94,11 +95,11 @@
         <li>Dataset related to wildlife conservation</li>
         <li>Challenge solutions</li>
       </ul>
-      欢迎以下方面的工作进行提交：
+      欢迎以下形式的相关论文提交：
       <ul>
-        <li>贡献论文</li>
-        <li>挑战的解决方案</li>
-        <li>有特色的现有工作</li>
+        <li>原创论文提交</li>
+        <li>过去1~2年已发表/已接收的有特色论文</li>
+        <li>挑战赛的解决方案论文</li>        
       </ul>
     </p>
   </div>
@@ -115,16 +116,19 @@
     <p>
       基于Amur Tiger Re-identification in Wild (ATRW)数据集，我们举办了包含以下四个任务的挑战赛：
       <ul>
-        <li>虎类目标检测</li>
-        <li>虎类关键点检测</li>
-        <li>虎类身份重识别，根据手工标注的检测框进行训练测试</li>
-        <li>全自动的虎类重识别，利用检测器的结果进行身份重识别</li>
+        <li>任务1： 老虎目标检测</li>
+        <li>任务2： 老虎关键点检测</li>
+        <li>任务3： 老虎身份再识别：根据手工标注的检测框/关键点进行训练测试</li>
+        <li>任务4： 全自动的老虎身份再识别: 利用自动检测器的结果进行老虎身份再识别</li>
       </ul>
-      ATRW数据集
+      ATRW数据集是目前已知最大的、标注也最丰富的野生动物再识别数据集，图1展示了数据集的相关标注图例。表1列出了和现有野生动物再识别数据集的比较。
+      <p><br /></p>
+      
       <div class="image_container">
         <img src="./imgs/det_1.jpg">
         <img src="./imgs/pose_4.jpg">
       </div>
+      <center>图1. ATRW数据集的老虎边界框(左)和关键点标注(右).</center>
       <br>
       <div class="col-xs-12" style="padding:0px">
         <table style="width:100%;border-bottom:solid 2px;font-size:10px;">
@@ -169,6 +173,7 @@
     </p>
   </div>
 </div>
+<center>表1. 目前已知野生动物再识别数据集比较.</center>
 
 <!--  -->
 <div class="row">
@@ -181,7 +186,7 @@
     <p>
 <ul>
 <li>5月8日: 网站上线.</li>
-<li>5月24日: 挑战赛 paper 上传Arxiv (todo).</li>
+<li>5月30日: 挑战赛数据集论文公开(todo).</li>
 </ul>
     </p>
   </div>
@@ -195,7 +200,7 @@
       <span>Weiyao Lin, Shanghai JiaoTong University</span><br>
       <span>Hanlin Tang, Intel AI Lab</span><br>
       <span>Greg Mori, Simon Fraser University</span><br>
-      <span>Joachim Denzler, <span style="font-size:0.8em">Friedrich Schiller University Jena<span></span><br>
+      <span>Joachim Denzler, Friedrich Schiller University Jena</span><br>
   </div>
 </div>
 
@@ -203,18 +208,12 @@
 <div class="row">
   <div class="col-xs-12">
     <h2>特邀演讲嘉宾</h2>
-
     <span>Pietro Perona, Caltech</span><br>
     <span>Jingdong Wang, Microsoft Research Asia</span><br>
-    <span>Director (TBD), WWF</span><br>
-    </div>
-  </div>
-
-  </div>
+    <span>Tech Director (TBD), WWF</span><br>
+   </div>  
 </div>
 <p><br /></p>
-
-
 
 <div class="row">
   <div class="col-xs-12">
@@ -262,31 +261,31 @@
     <table class="table table-striped">
       <tbody>
         <tr>
-          <td>训练/验证集公布</td>
+          <td>Training/validation dataset + development kit released</td>
           <td>June 28, 2019</td>
         </tr>
         <tr>
-          <td>测试集公布</td>
+          <td>Testing dataset released</td>
           <td>July 26, 2019</td>
         </tr>
         <tr>
-          <td>Contributed Paper 提交</td>
+          <td>Contributed Paper submission</td>
           <td>July 31, 2019</td>
         </tr>
         <tr>
-          <td>结果提交</td>
+          <td>Result submission</td>
           <td>August 2, 2019</td>
         </tr>
         <tr>
-          <td>挑战赛结果通知</td>
+          <td>Challenge result notification</td>
           <td>August 9, 2019</td>
         </tr>
         <tr>
-          <td>挑战赛论文提交</td>
+          <td>Challenge Paper submission</td>
           <td>August 15, 2019</td>
         </tr>
         <tr>
-          <td>接收通知</td>
+          <td>Acceptance notification</td>
           <td>August 23, 2019</td>
         </tr>
         <tr>
@@ -294,7 +293,7 @@
           <td>August 30, 2019</td>
         </tr>
         <tr>
-          <td>研讨会</td>
+          <td>Workshop</td>
           <td>October 27, 2019</td>
         </tr>
       </tbody>
