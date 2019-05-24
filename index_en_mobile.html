@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>CVWC2019</title>
+
+  <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+  <link rel="stylesheet" type="text/css" href="./mobile.css" media="screen,projection">
+  <link rel="icon" href="./icon.png" size="32x32">
+</head>
+
+<body id="body-home">
+
+<div class="container">
+  <div class="page-content">
+    <p><br /></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <center>
+          <center>
+            <h2 style="font-weight:300;font-size:20px"><a href="http://iccv2019.thecvf.com/" target="_blank">ICCV 2019 Workshop & Challenge on</a></h2>
+            <h1 style="font-size:22px">Computer Vision for Wildlife Conservation (CVWC)</h1>
+            <span style="color:#e74c3c;font-weight:400;">Oct-27, 2019 @ Room-E3, COEX Convention Center, Seoul, Korea</span>
+          </center>
+          <table>
+            <tbody>
+              <tr>
+                <td> <img src="./icon.png" style="height: 100px;margin-right:20px;"> </td>
+                <td> <img src="http://iccv2019.thecvf.com/images/ICCV19logo_main.png" style="height: 60px;margin-left:10px;margin-top: 40px;"> </td> </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </center>
+        <!-- <center>Sunday June 16 2019, 8:45am -- 5:40pm, <span style="color:#e74c3c;font-weight:400;">location TBA</span></center> -->
+      </div>
+    </div>
+    <hr />
+
+    <div class="row" id="intro">
+      <div class="col-md-12">
+        <!-- <img src="/static/img/splash.png" alt="Here need an image"/> -->
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>简介</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+Conservation of wildlife is important to maintaining a healthy and balanced ecosystem, and ensuring the continued biodiversity of our world. In particular,endangered species serve as an important indicator for biodiversity and environmental health. Governments around the world along with environmental organizations such as WWF (World Wildlife Fund) have dedicated many resources and projects to protect endangered species.
+</p>
+<p>Fortunately, computer vision techniques have shown promises in addressing several of these challenges, since we are now able to collecting plenty of imagery data from camera trap or even UAVs, and use this imagery to build edge-to-cloud systems for wildlife conservation. From the edge deployment perspective, CV techniques can be applied to smart imaging sensors to capture wildlife related images/video and monitor wildlife. Because cloud systems have access to significantly more compute, we can apply more sophisticated tasks such as  re-identifying certain wildlife individuals from a large amount of photos from distributed cameras, tracking movement patterns, and aggregating population information across multiple sensors.
+</p>
+<p>
+This workshop aims to enhance the social responsibility of the CV community, and bring together researchers in the community to advance wildlife conservation using CV techniques from 3 aspects:
+<ul>
+<li> Welcome contributed papers in a broad area of CV for wildlife conservation.</li>
+<li> Organize a challenge on dataset we collected for Amur tiger conservation with tasks like tiger detection, pose estimation and re-identification. </li>
+<li> Foster new ideas and directions on "CV for wildlife conservation" with invited talks and panel discussions from both the CV community and traditional wildlife conservation community. </li>
+</ul>
+   </p>
+  </div>
+<p><br /></p>
+</div>
+
+<p><br /></p>
+<!--  -->
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Call for papers</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      Workshop topics include (but are not limited to):
+      <ul>
+        <li>Fine-grained wildlife recognition</li>
+        <li>Wildlife re-identification</li>
+        <li>Wildlife tracking</li>
+        <li>Smart trap sensor design</li>
+        <li>Drone based monitoring/tracking</li>
+        <li>Simulation and visualization</li>
+        <li>Full conservation system</li>
+        <li>Dataset related to wildlife conservation</li>
+        <li>Challenge solutions</li>
+      </ul>
+      We invite paper submissions and featured works in three tracks：
+      <ul>
+        <li>Contributed papers</li>
+        <li>Featured existing works</li>
+        <li>Challenge solution papers</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Challenge</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      Based on Amur Tiger Re-identification in Wild (ATRW) dataset, we will host a challenge containing following tracks：
+      <ul>
+        <li>Track1: Tiger Detection</li>
+        <li>Track2: Tiger Pose Detection</li>
+        <li>Track3: Tiger Re-ID with Human Alignment: train and test according to manually annotated bounding boxex 根据手工标注的检测框/关键点进行训练测试</li>
+        <li>Track4： Tiger Re-ID in the Wild: make use of automatically detector's prediction to perform tiger re-ID.</li>
+      </ul>
+      The workshop will provide awards for each challenge track winner team thanks to our sponsor's generous donation.
+      <p><br /></p>
+      The ATRW dataset is currently the largest and most labeled wild animal re-identification dataset. Figure 1 shows a related annotation of the dataset. Table 1 lists the comparisons with existing wildlife re-identification data sets.
+      <p><br /></p>
+
+      <div class="image_container">
+        <img src="./imgs/det_1.jpg">
+        <img src="./imgs/pose_4.jpg">
+      </div>
+      <center>Figure 1. Illustration of bounding box and pose keypoint annotations in our ATRW dataset.</center>
+      <br>
+      <div class="col-xs-12" style="padding:0px">
+        <table style="width:100%;border-bottom:solid 2px;font-size:10px;">
+          <thead style="border-bottom:solid 2px;border-top:solid 2px">
+            <tr>
+              <th>Datasets</th>
+              <th> <u>ATRW</u> </th>
+              <th>[1,2]</th>
+              <th>C-Zoo[3]</th>
+              <th>C-Tai[3]</th>
+              <th>TELP[4]</th>
+              <th>α-whale[5]</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <th>Target</th><td> Tiger </td><td> Tiger </td><td> Chimpanzees </td><td> Chimpanzees </td><td> Elephant </td><td> Whale</td>
+          </tr>
+          <tr>
+            <th>Wild</th><td>√</td><td> √ </td><td> × </td><td>×  </td><td>× </td><td> √</td>
+          </tr>
+          <tr>
+            <th>Pose</th><td>√</td><td> × </td><td>×</td><td>×  </td><td>× </td><td> ×</td>
+          </tr>
+          <!-- <tr>
+            <th>#Images or #Clips   </th><td> 8,076* </td><td> 278   </td><td> 2,109  </td><td> 5,078  </td><td> 2,078 </td><td> 924</td>
+          </tr> -->
+          <tr>
+            <th>#BBoxes</th><td> 9,496 </td><td> 278   </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#BBoxes with ID</th><td>  3,649</td><td> 278 </td><td> 2,109  </td><td> 5,078 </td><td>  2,078 </td><td> 924</td>
+          </tr>
+          <tr>
+            <th>#ID  </th><td>  92   </td><td> 278   </td><td> 24     </td><td> 78    </td><td>  276   </td><td> 38</td>
+          </tr>
+          <tr>
+            <th>#BBx/ID   </th><td>  39.7 </td><td> 1     </td><td> 19.9   </td><td> 9.7   </td><td>  20.5  </td><td> 24.3</td>
+          </tr>
+        </tbody></table>
+        <br>
+    </div>
+    </p>
+  </div>
+</div>
+<center>Table 1. Comaprison of current wildlife re-ID datasets.</center>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Organizers</h2>
+      <span>Jianguo Li, Intel Labs</span><br>
+      <span>Weiyao Lin, Shanghai JiaoTong University</span><br>
+      <span>Hanlin Tang, Intel AI Lab</span><br>
+      <span>Greg Mori, Simon Fraser University</span><br>
+      <span>Joachim Denzler, Friedrich Schiller University Jena</span><br>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Invited Speakers</h2>
+    <span>Pietro Perona, Caltech</span><br>
+    <span>Jingdong Wang, Microsoft Research Asia</span><br>
+    <span>Tech Director (TBD), WWF</span><br>
+   </div>
+</div>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Advisory Board</h2>
+    <span>Yoshua Bengio, Professor, MILA</span><br>
+    <span>Pietro Perona, Professor, Caltech</span><br>
+    <span>Lucas Joppa, Chief Environmental Officer, Microsoft</span><br>
+  </div>
+</div>
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Program Committee Members</h2>
+    <span>Dan Morris (Microsoft)</span><br>
+    <span>Mac Oisin Aodha (Caltech)</span><br>
+    <span>Sara Beery (Caltech)</span><br>
+    <span>Elizabeth Bondi (University of Southern California)</span><br>
+    <span>Anna Bethke (Intel AI Lab)</span><br>
+    <span>Kristina Kermanshahche (Perspicace Inc)</span><br>
+    <span>Fei Fang (CMU)</span><br>
+    <span>Graham Taylor (University of Guelph)</span><br>
+    <!---<span>Liang Zheng (Australian National University)</span><br> --->
+    <span>Jiwen Lu (Tsinghua University)</span><br>
+    <span>Junliang Xing (CASIA, Chinese Academy of Science)</span><br>
+    <span>Shanshan Zhang (Nanjing University of Science and Technology)</span><br>
+	<span>Margaux Luck (Mila)</span><br>
+    <span>Tilo Burghardt (University of Bristol)</span><br>
+    <span>Alexander Freytag (Carl Zeiss AG)</span><br>
+    <span>Ergys Ristani (Facebook)</span><br>
+    <span>Michael Ying Yang (University of Twente, Netherland)</span><br>
+    <span>Ning Xu (Adobe Research)</span><br>
+    <span>Xintong Han (Malong Tech)</span><br>
+    <span>Shuyuan Li (SJTU)</span><br>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row" id="schedule">
+  <div class="col-xs-12">
+    <h2>Important Dates</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Training/validation dataset + development kit released</td>
+          <td>June 28, 2019</td>
+        </tr>
+        <tr>
+          <td>Testing dataset released</td>
+          <td>July 26, 2019</td>
+        </tr>
+        <tr>
+          <td>Contributed Paper submission</td>
+          <td>July 31, 2019</td>
+        </tr>
+        <tr>
+          <td>Result submission</td>
+          <td>August 2, 2019</td>
+        </tr>
+        <tr>
+          <td>Challenge result notification</td>
+          <td>August 9, 2019</td>
+        </tr>
+        <tr>
+          <td>Challenge Paper submission</td>
+          <td>August 15, 2019</td>
+        </tr>
+        <tr>
+          <td>Acceptance notification</td>
+          <td>August 23, 2019</td>
+        </tr>
+        <tr>
+          <td>Camera-ready</td>
+          <td>August 30, 2019</td>
+        </tr>
+        <tr>
+          <td>Workshop</td>
+          <td>October 27, 2019</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Sponsors</h2>
+    <!-- <p>The workshop also features presentations by representatives of the following companies:</p> -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"
+    style="display: inline-block;width:150px;background: url() no-repeat;border-bottom: none" aria-label="Intel homepage" title="Intel homepage">
+    <img src="./imgs/Intel_logo.png" />
+  </a>
+  </div>
+  <p><br></p>
+</div>
+
+<!--p><strong>Contact</strong>: <span style='color: #0000FF'>cvwc2019 AT hotmail.com</span>. Any question related to the workshop such as paper submission, challenge participation, etc, please feel free to send email to the contact mailbox. </p-->
+
+<p><br></p>
+</div>
+</div>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./bootstrap.min.js"></script>
+  </body>
+</html>
