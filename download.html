@@ -110,8 +110,10 @@ th{
       <br>
           <p>
             [<br>
-              &emsp;0:[29,38,10,.......],<br>
-              &emsp;3:[95,18,20,.......],<br>
+              &emsp;{"query_id":0,
+              &emsp; "ans_ids":[29,38,10,.......]},<br>
+              &emsp;{"query_id":3,
+              &emsp; "ans_ids":[95,18,20,.......]},<br>
               &emsp;...<br>
             ]<br>
             where the number is image id, and the arrays are arranged in order from most similar to least similar.
@@ -122,7 +124,7 @@ th{
         {<br>
           &emsp;"bboxs":[bbox],<br>
           &emsp;"reid_result":[<br>
-          &emsp;&emsp;id:[id]<br>
+          &emsp;&emsp;{"query_id":int,&emsp;"ans_ids":[int]}<br>
           &emsp;]<br>
         }<br>
 <br>
