@@ -22,7 +22,7 @@
       <div class="navbar-collapse collapse" id="navbar-main">
         <ul class="nav navbar-nav">
           <li><a href="./index.html#body-home">Home</a></li>
-          <li><a href="./challenge.html">Challenges</a></li>
+          <li><a href="./challenge.html">Challenge</a></li>
           <li><a href="./cfp.html">Call for Papers</a></li>
           <li><a href="./people.html">People</a></li>
         </ul>
@@ -46,12 +46,12 @@
 		East and Northeast China. The remaining wild population is estimated to be 600 individuals, so conservation is of crucial 
 		importance.
         </p>
-<p><u>Dataset:</u> With the help of WWF, a third-party company (MakerCollider) collected more than 8,000 Amur tiger video clips of 92 individuals from ~10 zoos in China. This raw dataset is donated to us for academic usage.
-We organize efforts to make bounding-box, keypoint-based pose, and identity annotations for sampled video frames and formuate the ATRW (Amur Tiger Re-identification in the Wild) dataset. <span style='color: #0000FF'>Figure 1</span> illustrates some example bounding box and pose keypoint annotations in our ATRW dataset.
+<p><u>Dataset:</u> With the help of WWF, a third-party company (MakerCollider) collected more than 8,000 Amur tiger video clips of 92 individuals from ~10 zoos in China. We organize efforts to make bounding-box, keypoint-based pose, and identity annotations for sampled video frames and formuate the ATRW (Amur Tiger Re-identification in the Wild) dataset. The whole dataset is released under the non-commercial/research purposed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/", target="_blank"><span style='color: #0000FF'>CC BY-NC-SA 4.0 Lcense</span></a>, with MakerCollider and WWF Amur tiger and leopard conservation programme team keeping the copyright of the raw video clips and all derived images. 
+<span style='color: #0000FF'>Figure 1</span> illustrates some example bounding box and pose keypoint annotations in our ATRW dataset.
         Our dataset is the largest wildlife re-ID dataset to date, <span style='color: #0000FF'>Table 1</span> lists a comparison of current wildlife re-ID datasets.
         The dataset will be divided into training, validation, and testing subsets.
         The training/validation subsets along with annotations will be released to public, with the annotations for the test subset withheld by the organizers. <br>
-        The dataset paper is released at arxiv: <a href="https://arxiv.org/abs/1906.05586", target="_blank">1906.05586</a>.
+        The dataset paper is released on Arxiv: <a href="https://arxiv.org/abs/1906.05586", target="_blank">1906.05586</a>.
         </p>
     <div class="col-xs-12 image_container">
       <img src="./imgs/det_1.jpg"/> <img src="./imgs/det_3.jpg"/>
@@ -129,6 +129,108 @@ We organize efforts to make bounding-box, keypoint-based pose, and identity anno
       </div>
      <p><br /></p>
     </div>
+
+<style>
+a{
+  color:#337ab7;
+}
+th,td{
+  padding-left:5px;
+  padding-right: 5px;
+}
+th{
+  text-align: center;
+}
+</style>
+
+<div class="row">
+ <div class="col-xs-12">
+  <h2>Dataset Download</h2>
+ </div>
+</div>
+ <br>
+<div class="row">
+  <div class="col-xs-12">
+    <table border=1px cellpadding=200>
+      <thead style="font-size:1.5em;">
+        <th>Track</th><th>Split</th><th>Images</th><th>Annotations</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Detection</td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_detection_train.tar.gz", target="_blank">Dectection_train</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_detection_train.tar.gz", target="_blank">Anno_Dectection_train</a> </td>
+        </tr>
+        <tr>
+          <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+        </tr>
+        <tr>
+          <td  rowspan="2">Pose</td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_train.tar.gz", target="_blank">Pose_train</a>,<a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_val.tar.gz">Pose_val</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_pose_train.tar.gz", target="_blank">Anno_Pose_trainval</a> </td>
+        </tr>
+        <tr>
+           <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+        </tr>
+        <tr>
+          <td  rowspan="2">Plain Re-ID</td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_reid_train.tar.gz", target="_blank">ReID_train</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_reid_train.tar.gz", target="_blank">Anno_ReID_train</a> </td>
+        </tr>
+        <tr>
+           <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+        </tr>
+        <tr>
+          <td  rowspan="">Re-ID in the Wild</td>
+          <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><br /></p>
+  <span>&emsp;*Data hosting provided by Microsoft AI for Earth Program.</span>
+</div>
+<p><br /></p>
+<div class="row">
+ <div class="col-xs-12">
+  <h2>Format Description</h2>
+ </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul>
+      <li> <u>Detection</u>: Dataset annotaiton in <a href="">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format</li>
+      <li> <u>Pose</u>: Both dataset annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format. </li>
+      <li> <u>Plain ReID</u>: Dataset constains cropped images with ID annotation and keypoints ground truth. Submission should be a json file in the following format :</li>
+      <br>
+          <p>
+            [<br>
+              &emsp;0:[29,38,10,.......],<br>
+              &emsp;3:[95,18,20,.......],<br>
+              &emsp;...<br>
+            ]<br>
+            where the fist number is query image id, and each followed array lists re-ID results (image ids) in the confidence descending order.
+          </p>
+      <li> <u>ReID in Wild</u>: Dataset only contains test set, which is the same as test set of detection track.</li>
+      <p>
+        Submission should be a json file with the following schema:<br><br>
+        {<br>
+          &emsp;"bboxs":[bbox],<br>
+          &emsp;"reid_result":[<br>
+          &emsp;&emsp;id:[id]<br>
+          &emsp;]<br>
+        }<br>
+<br>
+        bbox{<br>
+          &emsp;"id": int, #used in reid_result<br>
+          &emsp;"imageid": int,<br>
+          &emsp;"pos": [x,y,w,h] #x,y is the left-top coord, all in pixel.<br>
+        }<br>
+        where the reid_result almost the same as in Plain ReID, with id replaced with bbox id.
+      </p>
+    </ul>
+  </div>
+</div>
 
 <div class="row">
  <div class="col-xs-12">
