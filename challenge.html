@@ -53,7 +53,7 @@
         The training/validation subsets along with annotations will be released to public, with the annotations for the test subset withheld by the organizers. The dataset paper is released on Arxiv: <a href="https://arxiv.org/abs/1906.05586", target="_blank">1906.05586</a>.
         </p>
 <p><u>Dataset Copyright:</u> The whole dataset is released under the non-commercial/research purposed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/", target="_blank"><span style='color: #0000FF'>CC BY-NC-SA 4.0 Lcense</span></a>, with MakerCollider and WWF Amur tiger and leopard conservation programme team keeping the copyright of the raw video clips and all derived images.
-</P>        
+</P> 
     <div class="col-xs-12 image_container">
       <img src="./imgs/det_1.jpg"/> <img src="./imgs/det_3.jpg"/>
       <img src="./imgs/pose_3.jpg"/> <img src="./imgs/pose_4.jpg"/>
@@ -183,7 +183,7 @@ th{
         </tr>
         <tr>
           <td  rowspan="2">Pose</td>
-          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_train.tar.gz", target="_blank">Pose_train</a>,<a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_val.tar.gz">Pose_val</a> </td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_train.tar.gz", target="_blank">Pose_train</a>,<a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_val.tar.gz", target="_blank">Pose_val</a> </td>
           <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_pose_train.tar.gz", target="_blank">Anno_Pose_trainval</a> </td>
         </tr>
         <tr>
@@ -205,7 +205,7 @@ th{
     </table>
   </div>
   <p><br /></p>
-  <span>&emsp;*Data hosting provided by Microsoft AI for Earth Program.</span>
+  <span>&emsp;*Data hosting provided by Microsoft AI for Earth Program, Thanks.</span>
 </div>
 <p><br /></p>
 <div class="row">
@@ -216,9 +216,9 @@ th{
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li> <u>Detection</u>: Dataset annotaiton in <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/index.html", target="_blank">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format</li>
-      <li> <u>Pose</u>: Both dataset annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format. </li>
-      <li> <u>Plain ReID</u>: Dataset constains cropped images with ID annotation and keypoints ground truth. Submission should be a json file in the following format :</li>
+      <li> <u>Detection</u>: Data annotaiton in <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/index.html", target="_blank">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format</li>
+      <li> <u>Pose</u>: Both data annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format. </li>
+      <li> <u>Plain ReID</u>: Dataset constains cropped images with ID and keypoints annotations. Submission should be a json file in the following format:</li>
       <br>
           <p>
             [<br>
@@ -226,11 +226,10 @@ th{
               &emsp;3:[95,18,20,.......],<br>
               &emsp;...<br>
             ]<br>
-            where the first number is query image id, and each followed array lists re-ID results (image ids) in the confidence descending order.
+            where the first number is query image id, and each followed array within '[]' lists re-ID results (image ids) in the confidence descending order.
           </p>
       <li> <u>ReID in Wild</u>: Dataset only contains test set, which is the same as test set of detection track.</li>
-      <p>
-        Submission should be a json file with the following schema:<br><br>
+      <p>Submission should be a json file with the following schema:<br><br>
         {<br>
           &emsp;"bboxs":[bbox],<br>
           &emsp;"reid_result":[<br>
@@ -243,7 +242,7 @@ th{
           &emsp;"imageid": int,<br>
           &emsp;"pos": [x,y,w,h] #x,y is the left-top coord, all in pixel.<br>
         }<br>
-        where the reid_result almost the same as in Plain ReID, with id replaced with bbox id.
+        where the 'reid_result' is almost the same format as in Plain ReID, with only 'id' replaced by 'bbox id'.
       </p>
     </ul>
   </div>
