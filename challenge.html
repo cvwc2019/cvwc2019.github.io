@@ -102,7 +102,7 @@
     <center>Table 1. Comaprison of current wildlife re-ID datasets.</center>
     <p><br /> </p>
         <p><u>Requirement:</u> We require that participants agree to open-source their solution to support wildlife conservation. 
-        Participants allow using pre-trained ImageNet models, COCO models for the challenge. They should clearly state what kind of pre-trained models are used in their submission. Using additional collected tiger data and annotations is not allowed. 
+        Participants allow using pre-trained models on ImageNet, COCO, etc for the challenge. They should clearly state what kind of pre-trained models are used in their submission. Using dataset with tiger category and additional collected tiger data are not allowed. 
         Participants should submit their challenge results as well as full source-code packages for evaluation before deadline. 
         </p>
       </div>
@@ -215,7 +215,7 @@ th{
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li> <u>Detection</u>: Dataset annotaiton in <a href="">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format</li>
+      <li> <u>Detection</u>: Dataset annotaiton in <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/index.html", target="_blank">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format</li>
       <li> <u>Pose</u>: Both dataset annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format. </li>
       <li> <u>Plain ReID</u>: Dataset constains cropped images with ID annotation and keypoints ground truth. Submission should be a json file in the following format :</li>
       <br>
@@ -225,7 +225,7 @@ th{
               &emsp;3:[95,18,20,.......],<br>
               &emsp;...<br>
             ]<br>
-            where the fist number is query image id, and each followed array lists re-ID results (image ids) in the confidence descending order.
+            where the first number is query image id, and each followed array lists re-ID results (image ids) in the confidence descending order.
           </p>
       <li> <u>ReID in Wild</u>: Dataset only contains test set, which is the same as test set of detection track.</li>
       <p>
