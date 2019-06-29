@@ -40,20 +40,20 @@
     <div class="row">
       <div class="col-xs-12">
         <p>
-          The challenge will explore the use of CV techniques for endangered wildlife conservation, specifically focusing on the 
-		<a href="https://en.wikipedia.org/wiki/Siberian_tiger" target="_blank">Amur tiger</a>, also known as the Siberian tiger 
-		or the Northeast-China tiger.  The Amur tiger population is concentrated in the Far East, particularly the Russian Far 
-		East and Northeast China. The remaining wild population is estimated to be 600 individuals, so conservation is of crucial 
+          The challenge will explore the use of CV techniques for endangered wildlife conservation, specifically focusing on the
+		<a href="https://en.wikipedia.org/wiki/Siberian_tiger" target="_blank">Amur tiger</a>, also known as the Siberian tiger
+		or the Northeast-China tiger.  The Amur tiger population is concentrated in the Far East, particularly the Russian Far
+		East and Northeast China. The remaining wild population is estimated to be 600 individuals, so conservation is of crucial
 		importance.
         </p>
-<p><u>Dataset:</u> With the help of WWF, a third-party company (MakerCollider) collected more than 8,000 Amur tiger video clips of 92 individuals from ~10 zoos in China. We organize efforts to make bounding-box, keypoint-based pose, and identity annotations for sampled video frames and formuate the ATRW (Amur Tiger Re-identification in the Wild) dataset. 
+<p><u>Dataset:</u> With the help of WWF, a third-party company (MakerCollider) collected more than 8,000 Amur tiger video clips of 92 individuals from ~10 zoos in China. We organize efforts to make bounding-box, keypoint-based pose, and identity annotations for sampled video frames and formuate the ATRW (Amur Tiger Re-identification in the Wild) dataset.
 <span style='color: #0000FF'>Figure 1</span> illustrates some example bounding box and pose keypoint annotations in our ATRW dataset.
         Our dataset is the largest wildlife re-ID dataset to date, <span style='color: #0000FF'>Table 1</span> lists a comparison of current wildlife re-ID datasets.
         The dataset will be divided into training, validation, and testing subsets.
         The training/validation subsets along with annotations will be released to public, with the annotations for the test subset withheld by the organizers. The dataset paper is released on Arxiv: <a href="https://arxiv.org/abs/1906.05586", target="_blank">1906.05586</a>.
         </p>
 <p><u>Dataset Copyright:</u> The whole dataset is released under the non-commercial/research purposed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/", target="_blank"><span style='color: #0000FF'>CC BY-NC-SA 4.0 Lcense</span></a>, with MakerCollider and WWF Amur tiger and leopard conservation programme team keeping the copyright of the raw video clips and all derived images.
-</P> 
+</P>
     <div class="col-xs-12 image_container">
       <img src="./imgs/det_1.jpg"/> <img src="./imgs/det_3.jpg"/>
       <img src="./imgs/pose_3.jpg"/> <img src="./imgs/pose_4.jpg"/>
@@ -102,9 +102,9 @@
     </div>
     <center>Table 1. Comaprison of current wildlife re-ID datasets.</center>
     <p><br /> </p>
-        <p><u>Requirement:</u> We require that participants agree to open-source their solution to support wildlife conservation. 
-        Participants allow using pre-trained models on ImageNet, COCO, etc for the challenge. They should clearly state what kind of pre-trained models are used in their submission. Using dataset with tiger category and additional collected tiger data are not allowed. 
-        Participants should submit their challenge results as well as full source-code packages for evaluation before deadline. 
+        <p><u>Requirement:</u> We require that participants agree to open-source their solution to support wildlife conservation.
+        Participants allow using pre-trained models on ImageNet, COCO, etc for the challenge. They should clearly state what kind of pre-trained models are used in their submission. Using dataset with tiger category and additional collected tiger data are not allowed.
+        Participants should submit their challenge results as well as full source-code packages for evaluation before deadline.
         </p>
       </div>
     <p><br /></p>
@@ -220,20 +220,22 @@ th{
       <li> <u>Pose</u>: Both data annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format. </li>
       <li> <u>Plain ReID</u>: Dataset constains cropped images with ID and keypoints annotations. Submission should be a json file in the following format:</li>
       <br>
-          <p>
-            [<br>
-              &emsp;0:[29,38,10,.......],<br>
-              &emsp;3:[95,18,20,.......],<br>
-              &emsp;...<br>
-            ]<br>
-            where the first number is query image id, and each followed array within '[]' lists re-ID results (image ids) in the confidence descending order.
-          </p>
+        <p>
+          [<br>
+            &emsp;{"query_id":0,
+            &emsp; "ans_ids":[29,38,10,.......]},<br>
+            &emsp;{"query_id":3,
+            &emsp; "ans_ids":[95,18,20,.......]},<br>
+            &emsp;...<br>
+          ]<br>
+          where the "query_id" is query image id, and each followed array "ans_ids" lists re-ID results (image ids) in the confidence descending order.
+        </p>
       <li> <u>ReID in Wild</u>: Dataset only contains test set, which is the same as test set of detection track.</li>
       <p>Submission should be a json file with the following schema:<br><br>
         {<br>
           &emsp;"bboxs":[bbox],<br>
           &emsp;"reid_result":[<br>
-          &emsp;&emsp;id:[id]<br>
+          &emsp;&emsp;{"query_id":int,&emsp;"ans_ids":[int]}<br>
           &emsp;]<br>
         }<br>
 <br>
@@ -298,7 +300,7 @@ th{
     </div>
     <p><br /></p>
     <p><strong>Contact</strong>: <span style='color: #0000FF'>cvwc2019 AT hotmail.com</span>. Any question related to the workshop such as paper submission, challenge participation, etc, please feel free to send email to the contact mailbox. </p>
-    <p><br /></p>    
+    <p><br /></p>
   </div>
 </body>
 </html>
