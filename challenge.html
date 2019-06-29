@@ -221,11 +221,13 @@ th{
       <br>
           <p>
             [<br>
-              &emsp;0:[29,38,10,.......],<br>
-              &emsp;3:[95,18,20,.......],<br>
+              &emsp;{"query_id":0,
+              &emsp; "ans_ids":[29,38,10,.......]},<br>
+              &emsp;{"query_id":3,
+              &emsp; "ans_ids":[95,18,20,.......]},<br>
               &emsp;...<br>
             ]<br>
-            where the first number is query image id, and each followed array lists re-ID results (image ids) in the confidence descending order.
+            where the "query_id" is query image id, and each followed array "ans_ids" lists re-ID results (image ids) in the confidence descending order.
           </p>
       <li> <u>ReID in Wild</u>: Dataset only contains test set, which is the same as test set of detection track.</li>
       <p>
@@ -233,7 +235,7 @@ th{
         {<br>
           &emsp;"bboxs":[bbox],<br>
           &emsp;"reid_result":[<br>
-          &emsp;&emsp;id:[id]<br>
+          &emsp;&emsp;{"query_id":int,&emsp;"ans_ids":[int]}<br>
           &emsp;]<br>
         }<br>
 <br>
