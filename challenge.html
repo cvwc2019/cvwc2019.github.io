@@ -216,12 +216,12 @@ th{
 <div class="row">
   <div class="col-xs-12">
     <ul>
-      <li> <u>Detection</u>: Data annotaiton in <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/index.html", target="_blank">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format. Training with the given training set and testing set will be provided in the test stage. 
+      <li> <u>Detection</u>: Data annotaiton in <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/index.html", target="_blank">Pascal VOC</a> format. Submission in <a href="http://cocodataset.org/#format-data", target="_blank">COCO detection</a> format. Training with the given training set and testing set will be provided in the test stage.
       </li>
       <li> <u>Pose</u>: Both data annotaiton and submission are in <a href="http://cocodataset.org/#format-data", target="_blank">COCO</a> format.
-      Training with the given training set and testing set will be provided in the test stage. 
+      Training with the given training set and testing set will be provided in the test stage.
       </li>
-      <li> <u>Plain ReID</u>: Dataset constains cropped images with manual annotaetd ID and keypoints. Submission should be a json file in the following format:</li>
+      <li> <u>Plain ReID</u>: Dataset contains cropped images with manual annotaetd ID and keypoints. Submission should be a json file in the following format:</li>
       <br>
         <p>
           [<br>
@@ -233,12 +233,12 @@ th{
           ]<br>
           <span style='color: #0000FF'>where</span> the "query_id" is the id of query image, and each followed array "ans_ids" lists re-ID results (image ids) in the confidence descending order.
           <br>
-	       Similar to most existing Re-ID tasks, the plain Re-ID task requires to build models on training-set, and evaluating on the test-set. 
-	       During testing, each image will be taken as query image, while all the remained images in the test-set as "gallery" or "database", the query results should be rank-list of images in "gallery". The evaluation server will separate the test-set into two cases: single-camera and cross camera (see our arxiv report for more details) to measure performance. The evaluation metrics are mAP and top-k (k=1, 5). 	  
+	       Similar to most existing Re-ID tasks, the plain Re-ID task requires to build models on training-set, and evaluating on the test-set.
+	       During testing, each image will be taken as query image, while all the remained images in the test-set as "gallery" or "database", the query results should be rank-list of images in "gallery". The evaluation server will separate the test-set into two cases: single-camera and cross camera (see our arxiv report for more details) to measure performance. The evaluation metrics are mAP and top-k (k=1, 5).
         </p>
-      <li> <u>ReID in Wild</u>: This task aims to evaluate the performance of Re-ID in a full automatical way. 
-      Paritipants require to build tiger detector, tiger pose estimator, and re-ID module based on the provide training-set, and integrate them as a full pipeline  
-      to re-identification each detected tiger in a set of wild input images. 
+      <li> <u>ReID in Wild</u>: This task aims to evaluate the performance of Re-ID in a full automatical way.
+      Paritipants require to build tiger detector, tiger pose estimator, and re-ID module based on the provide training-set, and integrate them as a full pipeline
+      to re-identification each detected tiger in a set of wild input images.
       The test-set is the same as that of the detection task. The re-ID evaluation will use all the detected boxes as "gallery", while the other procedure is smilar to the plain re-ID case. Submission should be a json file with the following schema:<br><br>
         {<br>
           &emsp;"bboxs":[bbox],<br>
@@ -247,7 +247,7 @@ th{
           &emsp;]<br>
         }
         <br>
-	      <span style='color: #0000FF'>where</span> 
+	      <span style='color: #0000FF'>where</span>
 		<br>
         bbox{<br>
           &emsp;"bbox_id": int, #used in reid_result<br>
