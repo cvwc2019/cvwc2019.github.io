@@ -272,13 +272,13 @@ th{
       </div>
 </div>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Important Dates</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Important Dates</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
 <ul>
 <li>Training data release: <span style='color: #a00'>June 28, 2019</span></li>
 <li>Testing data release: <span style='color: #a00'>July 26, 2019</span></li>
@@ -289,9 +289,41 @@ th{
 <li>Camera Ready: <span style='color: #a00'> August 30, 2019</span></li>
 <li>Workshop: <span style='color: #a00'> October 27, 2019</span></li>
 </ul>
-      </div>
-    <p><br /></p>
-    </div>
+</div>
+<p><br /></p>
+</div>
+
+<div class="row">
+ <div class="col-xs-12">
+  <h2>FAQ</h2>
+ </div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+  <ul>
+    <li><b>Q:</b>  Registration required? <br>
+        <b>A:</b> No registration for participant required. Please register to submit results at the submission time after evaluation server released.</b>
+    </li>
+    <li><b>Q:</b> Detection/keypoint format examples? <br>
+        <b>A:</b> Please refer to <a href='https://github.com/cocodataset/cocoapi/blob/master/results/instances_val2014_fakebbox100_results.json'>this file</a> for detection and
+        <a href="https://github.com/cocodataset/cocoapi/blob/master/results/person_keypoints_val2014_fakekeypoints100_results.json">this file</a> for keypoint. Note that the keypoint definition is different in two datasets, please make corresponding changes.
+    </li>
+    <li><b>Q:</b> In reID task, number of data samples mis-matches in images and annotation file? <br>
+        <b>A:</b> The whole annotation includes some tiger frontal face based annotations, while our released annotation only contains side pose annotation of tigers since tiger re-id is based on stripe pattern rather than tiger face. We will release this part of annotation for future usages. <b>For the challenge, please refer to the annotation file.</b>
+    </li>
+    <li><b>Q:</b> Evaluation tool? <br>
+        <b>A:</b> We are preparing and testing the evaluation server. Once the server is released, we will update the website. For now, you can use following scripts to test on validate set. <br>
+        -Detection: Standard COCOApi(python ver.).<br>
+        -Keypoint:  Modified COCOApi(python ver.). Please change the 'sigmas' in L206 or L523(decided by the version of cocoapi) of cocoeval.py according to our paper(in which squared sigmas are listed).<br>
+        -Plain ReID: Please refer to <a href="https://github.com/VisualComputingInstitute/triplet-reid">this repo</a>. However, since the camera/frame infomation is not released, excluder is not available, which will lead to a virtual high performance of the model.
+
+    </li>
+    <!--li><b>Q:</b> <br>
+        <b>A:</b>
+    </li-->
+  </ul>
+</div>
+</div>
 
     <div class="row">
       <div class="col-xs-12">
