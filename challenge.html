@@ -175,31 +175,32 @@ th{
       <tbody>
         <tr>
           <td rowspan="2">Detection</td>
-          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_detection_train.tar.gz", target="_blank">Dectection_train</a> </td>
-          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_detection_train.tar.gz", target="_blank">Anno_Dectection_train</a> </td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_detection_train.tar.gz" target="_blank">Dectection_train</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_detection_train.tar.gz" target="_blank">Anno_Dectection_train</a> </td>
         </tr>
         <tr>
-          <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+          <td>test</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/test/atrw_detection_test.tar.gz" target="_blank">Detection_test</a> </td> <td> <a href="#">-</a> </td>
         </tr>
         <tr>
           <td  rowspan="2">Pose</td>
-          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_train.tar.gz", target="_blank">Pose_train</a>,<a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_val.tar.gz", target="_blank">Pose_val</a> </td>
-          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_pose_train.tar.gz", target="_blank">Anno_Pose_trainval</a> </td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_train.tar.gz" target="_blank">Pose_train</a>,<a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_pose_val.tar.gz", target="_blank">Pose_val</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_pose_train.tar.gz" target="_blank">Anno_Pose_trainval</a> </td>
         </tr>
         <tr>
-           <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+           <td>test</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/test/atrw_pose_test.tar.gz" target="_blank">Pose_test</a> </td> <td> <a href="#">-</a> </td>
         </tr>
         <tr>
           <td  rowspan="2">Plain Re-ID</td>
-          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_reid_train.tar.gz", target="_blank">ReID_train</a> </td>
-          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_reid_train.tar.gz", target="_blank">Anno_ReID_train</a> </td>
+          <td>train</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_reid_train.tar.gz" target="_blank">ReID_train</a> </td>
+          <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/train/atrw_anno_reid_train.tar.gz" target="_blank">Anno_ReID_train</a> </td>
         </tr>
         <tr>
-           <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+           <td>test</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/test/atrw_reid_test.tar.gz" target="_blank">ReID_test</a> </td>
+           <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/test/atrw_anno_pose_test.tar.gz">Anno_ReID_test</a> </td>
         </tr>
         <tr>
           <td  rowspan="">Re-ID in the Wild</td>
-          <td>test</td> <td> <a href="#">-</a> </td> <td> <a href="#">-</a> </td>
+          <td>test</td> <td> <a href="https://lilablobssc.blob.core.windows.net/cvwc2019/test/atrw_detection_test.tar.gz" target="_blank">Detection_test</a> </td> <td> <a href="#">-</a> </td>
         </tr>
       </tbody>
     </table>
@@ -288,7 +289,7 @@ th{
         <a href="https://github.com/cocodataset/cocoapi/blob/master/results/person_keypoints_val2014_fakekeypoints100_results.json", target="_blank">this file</a> for keypoint. Note that the keypoint definition is different in COCO and our datasets, please make corresponding changes.
     </li>
     <li><b>Q:</b> In plain reID task, 3392 cropped images not match to 1887 annotations in training set?<br>
-        <b>A:</b> The annotated images include three cases: left/right sides, and frontal tiger face. 
+        <b>A:</b> The annotated images include three cases: left/right sides, and frontal tiger face.
         Our released annotation only contains left/right side pose annotation of tigers since tiger re-id is based on stripe pattern rather than tiger face. <b>For the challenge, please build system based on the annotation file.</b>
     </li>
     <li><b>Q:</b> Could you provide evaluation tool? <br>
@@ -296,17 +297,17 @@ th{
          Please keep an eye on our website for the update. For now, you can use following scripts to test on validate set. <br>
         -Detection: standard COCOApi (python ver.).<br>
         -Keypoint:  modified COCOApi (python ver.). Please change the 'sigmas' in L206 or L523 (depends on the cocoapi version) of cocoeval.py according to our paper (in which squared sigmas are listed).<br>
-        -Plain ReID: Please refer to evaluate.py of <a href="https://github.com/VisualComputingInstitute/triplet-reid", target="_blank">this repo</a>. 
-        As the frame excluder are not open to public, the evluation results may tend to be optimistic.         
+        -Plain ReID: Please refer to evaluate.py of <a href="https://github.com/VisualComputingInstitute/triplet-reid", target="_blank">this repo</a>.
+        As the frame excluder are not open to public, the evluation results may tend to be optimistic.
     </li>
     <li><b>Q:</b> What is difference between open testing leaderboard, and final evaluation leaderboard?<br>
-        <b>A:</b> We adopt similar strategy as some kaggle challenges. During open testing, we randomly select half samples (fixed) from testset for evaluation, and open this leaderboard to public. The final leaderboard will be based on the evaluation over the whole testset, which will be released to public after the challenge. </b>        
+        <b>A:</b> We adopt similar strategy as some kaggle challenges. During open testing, we randomly select half samples (fixed) from testset for evaluation, and open this leaderboard to public. The final leaderboard will be based on the evaluation over the whole testset, which will be released to public after the challenge. </b>
     </li>
     <li><b>Q:</b> How many submissions per day during testing phase?<br>
         <b>A:</b> Each participant team will allow at most <b>2</b> submissions per day per track.
-        Each participant team requires to include information for all team members (affiliation and email) during evaluation server registration. 
-        Multi-account submission from one team is not allowed. Once detected, performance from those accounts will not be taken into consideration for final leaderboard. 
-        </b>        
+        Each participant team requires to include information for all team members (affiliation and email) during evaluation server registration.
+        Multi-account submission from one team is not allowed. Once detected, performance from those accounts will not be taken into consideration for final leaderboard.
+        </b>
     </li>
     <!--li><b>Q:</b> <br>
         <b>A:</b>
