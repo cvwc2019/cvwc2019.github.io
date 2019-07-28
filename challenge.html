@@ -304,7 +304,7 @@ th{
         <b>A:</b> We adopt similar strategy as some kaggle challenges. During open testing, we randomly select half samples (fixed) from testset for evaluation, and open this leaderboard to public. The final leaderboard will be based on the evaluation over the whole testset, which will be released to public after the challenge. </b>
     </li>
     <li><b>Q:</b> How many submissions per day during testing phase?<br>
-        <b>A:</b> Each participant team will allow at most <b>2</b> submissions per day per track.
+        <b>A:</b> Each participant team will allow at most <b>4</b> submissions per day per track.
         Each participant team requires to include information for all team members (affiliation and email) during evaluation server registration.
         Multi-account submission from one team is not allowed. Once detected, performance from those accounts will not be taken into consideration for final leaderboard.        
     </li>
@@ -317,6 +317,9 @@ th{
         <b>A:</b> Due to evaluation server limitation, the detection track will only evaluate and rank by accuracy (mAP etc). 
         After final submission, we require each team to submit their run-time cost (FLOPs and model-size) information. We will build a metric like performance-per-FLOPs (PPF) to rank submissions in this track.
     </li>
+    <li><b>Q:</b> How to indicate which submission is final?<br>
+        <b>A:</b> You may add a postfix like "final" into your final submission name to indicate that. If you do not indicate that, we will by default use your best performed submissions in the test-dev evaluation as the final submission. 
+    </li>    
     <!--li><b>Q:</b> <br>
         <b>A:</b>
     </li-->
