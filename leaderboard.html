@@ -1,0 +1,1376 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Leader Board-CVWC2019</title>
+
+  <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+  <link rel="stylesheet" type="text/css" href="./main.css" media="screen,projection">
+  <link rel="icon" href="./icon.png" size="32x32">
+  <script src="./jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header">
+      </div>
+
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html#body-home">Home</a></li>
+          <li><a href="./challenge.html">Challenge</a></li>
+          <li><a href="./cfp.html">Call for Papers</a></li>
+          <li><a href="./people.html">People</a></li>
+          <li><a href="./leaderboard.html">Leader Board</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+<div class="container">
+
+
+
+<style>
+a{
+  color:#337ab7;
+}
+
+.board{
+  margin:10px auto;
+  width: 100%;
+  text-align: center;
+}
+
+.board>table{
+  display: inline-block;
+  margin: 10px auto;
+
+}
+
+button{
+  height: 4ex;
+  width: 10em;
+  margin: 10px auto 0 auto;
+  background-color: #d2e4fc;
+}
+
+button:disabled{
+  background-color: #204e80;
+  color:white;
+}
+
+b.sus{
+  color:red;
+  font-weight: 1000;
+  font-size: 1.5em;
+}
+
+</style>
+
+<div class="">
+  <div style="width:100%;text-align:center;">
+    <button type="button" name="button" id="det_btn">Detection Track</button>
+    <button type="button" name="button" id="pose_btn">Pose Track</button>
+    <button type="button" name="button" id="plain_btn">Plain ReID Track</button>
+    <button type="button" name="button" id="wild_btn">Wild ReID Track</button>
+  </div>
+</div>
+
+<div id="detect" class="board">
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-cly1{text-align:left;vertical-align:middle}
+    .tg .tg-5lax{background-color:#D2E4FC;text-align:left;vertical-align:middle}
+    .tg .tg-nrix{text-align:center;vertical-align:middle}
+  </style>
+  <table id="det_public" class="tg">
+    <tr>
+      <th class="tg-nrix" colspan="5">Test-dev</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">Team</td>
+      <td class="tg-48yq">mAP</td>
+      <td class="tg-48yq">BFLOPs</td>
+      <td class="tg-48yq" title='(mAP-0.43)/BFLOPs'>PPF-b</td>
+      <td class="tg-phtq" title='(1-rank_mAP/total_teams)*(1-rank_FLOPs/total_teams)'>PPF-a</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[1]AlexNet in my heart</td>
+      <td class="tg-lboi">0.515</td>
+      <td class="tg-lboi">0.071</td>
+      <td class="tg-lboi">1.199</td>
+      <td class="tg-0pky">0.630</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[2]YuTeam</td>
+      <td class="tg-48yq">0.492</td>
+      <td class="tg-48yq">0.022</td>
+      <td class="tg-48yq">2.797</td>
+      <td class="tg-phtq">0.571</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[3]dcyhw</td>
+      <td class="tg-lboi">0.586</td>
+      <td class="tg-lboi">5.68</td>
+      <td class="tg-lboi">0.027</td>
+      <td class="tg-0pky">0.467</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[4]zdi</td>
+      <td class="tg-48yq">0.601</td>
+      <td class="tg-48yq">245.3</td>
+      <td class="tg-48yq">0.001</td>
+      <td class="tg-phtq">0.388</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[5]lazy-learners</td>
+      <td class="tg-lboi">0.546</td>
+      <td class="tg-lboi">112.48</td>
+      <td class="tg-lboi">0.001</td>
+      <td class="tg-0pky">0.388</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[6]Team Galactic</td>
+      <td class="tg-48yq">0.479</td>
+      <td class="tg-48yq">0.466</td>
+      <td class="tg-48yq">0.106</td>
+      <td class="tg-phtq">0.374</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">CVWC SSDv2</td>
+      <td class="tg-lboi">0.476</td>
+      <td class="tg-lboi">1.25</td>
+      <td class="tg-lboi">0.037</td>
+      <td class="tg-0pky">0.277</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[7]DeepBlueAI</td>
+      <td class="tg-48yq">0.442</td>
+      <td class="tg-48yq">0.25</td>
+      <td class="tg-48yq">0.046</td>
+      <td class="tg-48yq">0.180</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">CVWC SSDv1</td>
+      <td class="tg-lboi">0.426</td>
+      <td class="tg-lboi">1.2</td>
+      <td class="tg-lboi">-0.003</td>
+      <td class="tg-lboi">0.114</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[8]bagh</td>
+      <td class="tg-48yq">0.262</td>
+      <td class="tg-48yq">0.00546</td>
+      <td class="tg-48yq">-30.776</td>
+      <td class="tg-48yq">0.111</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[9]eyeoftiger</td>
+      <td class="tg-lboi">0.456</td>
+      <td class="tg-lboi">535</td>
+      <td class="tg-lboi">0.000</td>
+      <td class="tg-0pky">0.104</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[10]DelPro</td>
+      <td class="tg-48yq">0.480</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-phtq">0</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[11]Bestfitting_NBU</td>
+      <td class="tg-lboi">0.460</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-0pky">0</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[12]tony19</td>
+      <td class="tg-48yq">0.507</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-phtq">0</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[13],</td>
+      <td class="tg-lboi">0.465</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-0pky">0</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[14]TeamEVAC</td>
+      <td class="tg-phtq">0.014</td>
+      <td class="tg-phtq">N/A</td>
+      <td class="tg-phtq">N/A</td>
+      <td class="tg-phtq">0</td>
+    </tr>
+  </table>
+  &emsp;
+  <table id="det_private" class="tg">
+    <tr>
+      <th class="tg-nrix" colspan="5">Full Test</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">Team</td>
+      <td class="tg-48yq">mAP</td>
+      <td class="tg-48yq">BFLOPs</td>
+      <td class="tg-48yq" title='(mAP-0.43)/BFLOPs'>PPF-b</td>
+      <td class="tg-phtq" title='(1-rank_mAP/total_teams)*(1-rank_FLOPs/total_teams)'>PPF-a</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[1]AlexNet in my heart</td>
+      <td class="tg-lboi">0.513</td>
+      <td class="tg-lboi">0.071</td>
+      <td class="tg-lboi">1.169</td>
+      <td class="tg-0pky">0.630</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[2]YuTeam</td>
+      <td class="tg-48yq">0.482</td>
+      <td class="tg-48yq">0.022</td>
+      <td class="tg-48yq">2.347</td>
+      <td class="tg-phtq">0.519</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[3]dcyhw</td>
+      <td class="tg-lboi">0.586</td>
+      <td class="tg-lboi">5.680</td>
+      <td class="tg-lboi">0.028</td>
+      <td class="tg-0pky">0.467</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[4]zdi</td>
+      <td class="tg-48yq">0.601</td>
+      <td class="tg-48yq">245.3</td>
+      <td class="tg-48yq">0.001</td>
+      <td class="tg-phtq">0.388</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[5]lazy-learners</td>
+      <td class="tg-lboi">0.548</td>
+      <td class="tg-lboi">112.48</td>
+      <td class="tg-lboi">0.001</td>
+      <td class="tg-0pky">0.388</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[6]Team Galactic</td>
+      <td class="tg-48yq">0.475</td>
+      <td class="tg-48yq">0.466</td>
+      <td class="tg-48yq">0.097</td>
+      <td class="tg-phtq">0.374</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">CVWC SSDv2</td>
+      <td class="tg-lboi">0.473</td>
+      <td class="tg-lboi">1.250</td>
+      <td class="tg-lboi">0.034</td>
+      <td class="tg-0pky">0.277</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[7]DeepBlueAI</td>
+      <td class="tg-48yq">0.432</td>
+      <td class="tg-48yq">0.250</td>
+      <td class="tg-48yq">0.009</td>
+      <td class="tg-phtq">0.180</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">CVWC SSDv1</td>
+      <td class="tg-lboi">0.418</td>
+      <td class="tg-lboi">1.2</td>
+      <td class="tg-lboi">-0.010</td>
+      <td class="tg-0pky">0.114</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[8]bagh</td>
+      <td class="tg-48yq">0.259</td>
+      <td class="tg-48yq">5.46E-03</td>
+      <td class="tg-48yq">-31.248</td>
+      <td class="tg-48yq">0.111</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[9]eyeoftiger</td>
+      <td class="tg-lboi">0.459</td>
+      <td class="tg-lboi">535</td>
+      <td class="tg-lboi">0.000</td>
+      <td class="tg-0pky">0.104</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[10]DelPro</td>
+      <td class="tg-48yq">0.483</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-48yq">0</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[11]Bestfitting_NBU</td>
+      <td class="tg-lboi">0.459</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-lboi">0</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[12]tony19</td>
+      <td class="tg-48yq">0.507</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-48yq">N/A</td>
+      <td class="tg-phtq">0</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[13], </td>
+      <td class="tg-lboi">0.467</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-lboi">N/A</td>
+      <td class="tg-0pky">0</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[14]TeamEVAC</td>
+      <td class="tg-phtq">0.014</td>
+      <td class="tg-phtq">N/A</td>
+      <td class="tg-phtq">N/A</td>
+      <td class="tg-phtq">0</td>
+    </tr>
+  </table>
+  <br>
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+  <table id="det_team" class="tg">
+    <tr>
+      <th class="tg-lboi">Team</th>
+      <th class="tg-0pky">Members</th>
+      <th class="tg-lboi">Repo</th>
+      <th class="tg-lboi">Description</th>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[1]AlexNet in my heart</td>
+      <td class="tg-0pky">heart/Batiary Orest Kupyn(Ukrainian Catholic University),<br>Dzmitry Pranchuk(WANNABY),<br>Volodymyr Budzan</td>
+      <td class="tg-lboi">https://github.com/KupynOrest/AmurTigerCVWC</td>
+      <td class="tg-lboi">We used custom network architecture based on RetinaNet with MobileNetv1 backbone. To achieve greated efficiency we use Depthwise Separable Convolutions instead of regular one and smaller num of layers in localization/classification head. We train our net on 224 img size. As the second stage we also use knowledge distillation via pseudolabelling with large SE-ResNeXt-101 network.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[2]YuTeam</td>
+      <td class="tg-phtq">Yuanqiang Cai,<br>Libo Zhang(ISCAS), <br>Dawei Du</td>
+      <td class="tg-48yq">https://github.com/yuchengtianxia/SLN_Final</td>
+      <td class="tg-48yq">We present a tiger detector, SLN(Final). The SLN is an anchor-free tiger detector. <br>Its backbone network is MobileNetV1. It uses FPN and Deformable Convolution to fuse and modify features.<br>It has light FLOPs (22,276,055), training parameters(4,505,816), and model size (.data(72.2MB)+ .index(21.7KB)+.meta(3.3MB)).</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[3]dcyhw</td>
+      <td class="tg-0pky">Jianwei Dong,<br>Longrong Yang,<br>Junjie Chen,<br>Junqiang Huang,<br>Xinxu Wei</td>
+      <td class="tg-lboi">https://github.com/JwDong2019/CVWC-2019-FCOS</td>
+      <td class="tg-lboi">We solve the detection track by adopting FCOS  which is  proposed in CVPR 2019 and our backbone is resnet 50.  We used COCO datasets for pretraining and deformable convolution is also added into our method for enhanced performance. <br></td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[4]zdi</td>
+      <td class="tg-phtq">Zonglin Di(TJU),<br>Bingchen Zhao(TJU)</td>
+      <td class="tg-48yq">https://github.com/ElegantLin/CVWC-2019</td>
+      <td class="tg-48yq">The base net I used is Faster RCNN using HRNet as backbone from https://github.com/HRNet/HRNet-Object-Detection. The pretrained model is from ImageNet and I fine-tuned it with training set. We tried several tricks and the best mAP we got is 0.60009 with 245.3 GFLOPs.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[5]lazy-learners</td>
+      <td class="tg-0pky">Srinivas VARADHARAJAN(Dell EMC),<br>Vish KAVASSERYRAJALINGAM(Samsung)<br></td>
+      <td class="tg-lboi">SRINIVAS.VARADHARAJAN@live.com<br>viswa1410@gmail.com<br></td>
+      <td class="tg-lboi">The model is based on ResNet feature extractor pre-trained on MS-COCO dataset, the detection head is a FasterRCNN based model. There were several data augmentations technique added to augment the training data size. Hyperparameter tuning was effectively done after multiple experiments.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[6]Team Galactic</td>
+      <td class="tg-phtq">Wei Runchen,<br>Luo Dawei,<br>Yin Xiaojie</td>
+      <td class="tg-48yq">https://github.com/RunchenWei/YOLO-mini-tiger</td>
+      <td class="tg-48yq">1.We use YOLOv3 method based on Darknet framework, and its backbone is EfficientNet_b0( its structure have been adjusted to single label classification with small sample dataset.) The loss function is replaced with Generalized Intersection over Union Loss(GIoU Loss).<br>2.All of our submission was trained on Amur Tiger trainset without any tricks (without multi-scales or flip in traning and evaluation) and We use Gaussian distribution random initialization without any pretrained model.<br>3. We propose a new backbone structure adjustment algorithm to reduce the BFLOPs and model size in any backbone.( It is only used in  single label classification with small sample dataset, it is different from prune algorithm ).</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[7]DeepBlueAI</td>
+      <td class="tg-0pky">Zhipeng Luo,<br>Feng Ni,<br>Zhenyu Xu,<br>Yuehan yao,<br>Bin Dong</td>
+      <td class="tg-lboi">https://github.com/nemonameless/mmdettiger</td>
+      <td class="tg-lboi">We adopts MobileNetV2-SSDLite, achieving the trade-off between mAP and FLOPs by reducing 50% number of channels. We only use ImageNet pre-trained MobileNetV2 model.<br>And we do not use multiple models, multi-scales or flip in the evaluation, just single model and single scale(300*300) for training and testing. <br>We just use soft NMS for a little gain.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[8]bagh</td>
+      <td class="tg-phtq">saket kunwar</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq">Model is yolov3-tiny with custom anchors determined from ground truth boxes. Pytorch was used for training using coco pretrained weights. But for inference the trained model was converted
+        to intel openvino format with fixes for proper image re-scaling and anchor sizes. Yolov3 was also tested with pytorch and openvino but final submitted result on leader-board is yolov3-tiny.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[9]eyeoftiger</td>
+      <td class="tg-0pky">Anay Majee(Intel),<br>Kshitij Agrawal(Intel)</td>
+      <td class="tg-lboi">https://github.com/kshitijagrwl/tiger_detection</td>
+      <td class="tg-lboi">SSD-inceptionv2<br>We have used a vanila SSD network with an inception v2 backbone at a resolution of 300x300. The model is pretrained on COCO Detection task and finetuned for the ATRW dataset.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[10]DelPro</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq"></td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[11]Bestfitting_NBU</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi"></td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[12]tony19</td>
+      <td class="tg-phtq">nemonameless@qq.com</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq"></td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[13],</td>
+      <td class="tg-0pky">hamletkong@gmail.com</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[14]TeamEVAC</td>
+      <td class="tg-phtq"></td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq">No Response</td>
+    </tr>
+  </table>
+</div>
+
+<div id="pose" style="display:none" class="board">
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+  <table id="pose_public" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="2">Test-dev</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">Team</td>
+      <td class="tg-48yq">mAP</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">[1]DeepBlueAI</td>
+      <td class="tg-0lax">0.904</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[2]UCAS-ISCAS</td>
+      <td class="tg-phtq">0.900</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[3]eyeoftiger</td>
+      <td class="tg-0pky">0.891</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC HRNet</td>
+      <td class="tg-phtq">0.876</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]DelPro</td>
+      <td class="tg-0pky">0.867</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[5]bagh</td>
+      <td class="tg-phtq">0.867</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[6]CV_tiger</td>
+      <td class="tg-0pky">0.838</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[7]AlexNet in my heart</td>
+      <td class="tg-phtq">0.741</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[8]naive_baseline</td>
+      <td class="tg-0pky">0.678</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC AlphaPose</td>
+      <td class="tg-phtq">0.576</td>
+    </tr>
+  </table>
+  &emsp;&emsp;&emsp;&emsp;
+  <table id="pose_private" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="2">Full Test</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">Team</td>
+      <td class="tg-48yq">mAP</td>
+    </tr>
+    <tr>
+      <td class="tg-0lax">[1]DeepBlueAI</td>
+      <td class="tg-0lax">0.894</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[2]UCAS-ISCAS</td>
+      <td class="tg-phtq">0.892</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[3]eyeoftiger</td>
+      <td class="tg-0pky">0.874</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC HRNet</td>
+      <td class="tg-phtq">0.869</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]DelPro</td>
+      <td class="tg-0pky">0.859</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[5]bagh</td>
+      <td class="tg-phtq">0.849</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[6]CV_tiger</td>
+      <td class="tg-0pky">0.835</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[7]AlexNet in my heart</td>
+      <td class="tg-phtq">0.732</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[8]naive_baseline</td>
+      <td class="tg-0pky">0.671</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC AlphaPose</td>
+      <td class="tg-phtq">0.574</td>
+    </tr>
+  </table>
+  <br>
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+  <table id="pose_team" class="tg">
+    <tr>
+      <th class="tg-lboi">Team</th>
+      <th class="tg-0pky">Members</th>
+      <th class="tg-lboi">Repo</th>
+      <th class="tg-lboi">Description</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[1]DeepBlueAI</td>
+      <td class="tg-phtq">Zhipeng Luo,<br>Feng Ni,<br>Zhenyu Xu,<br>Yuehan yao,<br>Bin Dong</td>
+      <td class="tg-48yq">https://github.com/dbofseuofhust/Pose-Track-Solutions</td>
+      <td class="tg-48yq">We chose posenet as the basic algorithm, and improved UNET,HRNET as our backbone and added spatial attentions to the downsampling layers to obtain more spatial information. Additional data augments are made to the data set to improve generalization ability. We use COCO pre-trained models.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[2]UCAS-ISCAS</td>
+      <td class="tg-0pky">Hao Wang(UCAS), <br>Libo Zhang(ISCAS),<br>Longyin Wen</td>
+      <td class="tg-lboi">https://github.com/JisuiWang/CVWC2019-pose</td>
+      <td class="tg-lboi">Our Solution is mostly based on the CVPR19 work: Deep High-Resolution Representation Learning for Human Pose Estimation, and we just modify some parameters in the open-sourced code according to the difference of keypoints between human and tiger. We used the pretrained model as the paper described which is trained on imagenet.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[3]eyeoftiger</td>
+      <td class="tg-phtq">Anay Majee(Intel),<br>Kshitij Agrawal(Intel)</td>
+      <td class="tg-48yq">https://github.com/amajee11us/ATRW_Ensemble_HRnet</td>
+      <td class="tg-48yq">The key aspect of our approach was to improve on the corner cases on already effective HRNet network. For this reason, the following methodology was adopted:<br>1.We conducted experiments with multi resolution images to test the effect of resolution on the model. We finally settled on 640x480 input size.<br>2.During training we adopted a 5 fold split on the entire train+validation dataset.<br>3.For improving the accuracy during inference, the 5 fold split was ensembled using multiple approaches - average ensemble, bagging  ensemble and random forest ensemble for obtaining the best results from the solution. For the submission we have selected average ensemble as it performed the best in our experiments.<br>4.All the models used we trained on HRNet-W32 network which were pre-trained on ImageNet dataset.</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]DelPro</td>
+      <td class="tg-0pky">Ankita Shukla(IIITD),<br>Gullal Singh Cheema(IIITD),<br>Connor Anderson(BYU),<br>Pei Gao(BYU),<br>Ryan Farrell(BYU),<br>Saket Anand(IIITD),<br>Divyam Anshumaan(IIITD)</td>
+      <td class="tg-0pky">https://github.com/FGVC/DelPro</td>
+      <td class="tg-0pky">We use an HRNet-W48 model, pretrained on the COCO dataset. We use data augmentation like random rotation and random horizontal flipping. We train on images resized to 384x288.</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[5]bagh</td>
+      <td class="tg-phtq">saket kunwar</td>
+      <td class="tg-phtq"></td>
+      <td class="tg-phtq">Hrnet was used in this track with image dimension of 288x384. Imagenet pretrained weights were used.</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[6]CV_tiger</td>
+      <td class="tg-0pky">1564480490@qq.com</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0pky"></td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[7]AlexNet in my heart</td>
+      <td class="tg-phtq">heart/Batiary Orest Kupyn(Ukrainian Catholic University),<br>Dzmitry Pranchuk(WANNABY),<br>Volodymyr Budzan</td>
+      <td class="tg-phtq">https://github.com/KupynOrest/AmurTigerCVWC</td>
+      <td class="tg-phtq">Simple FPN network with SE-ResNeXt-50 backbone for heatmap prediction. Each keypoint is predicted as the saparate heatmap using soft IoU loss.</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[8]naive_baseline</td>
+      <td class="tg-0pky">me@arseny.info</td>
+      <td class="tg-0pky"></td>
+      <td class="tg-0pky">No Response</td>
+    </tr>
+  </table>
+</div>
+<!-- reids -->
+
+<div id="plain" style="display:none" class="board">
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-hmp3{background-color:#D2E4FC;text-align:left;vertical-align:top}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-svo0{background-color:#D2E4FC;border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+  </style>
+  <table id="plain_public" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="8">Test-dev</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq" rowspan="2">Team</td>
+      <td class="tg-48yq" title='(mAP_single+mAP_cross)/2' rowspan="2">mmAP</td>
+      <td class="tg-svo0" colspan="3">Single Cam</td>
+      <td class="tg-svo0" colspan="3">Cross Cam</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">0.812</td>
+      <td class="tg-phtq">0.909</td>
+      <td class="tg-phtq">0.986</td>
+      <td class="tg-phtq">0.997</td>
+      <td class="tg-phtq">0.715</td>
+      <td class="tg-phtq">0.937</td>
+      <td class="tg-phtq">0.971</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[2]BRL-RedPanda</td>
+      <td class="tg-0pky">0.773</td>
+      <td class="tg-0pky">0.911</td>
+      <td class="tg-0pky">0.986</td>
+      <td class="tg-0pky">0.989</td>
+      <td class="tg-0pky">0.635</td>
+      <td class="tg-0pky">0.903</td>
+      <td class="tg-0pky">0.971</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[3]NWPU_ASGO</td>
+      <td class="tg-phtq">0.744</td>
+      <td class="tg-phtq">0.879</td>
+      <td class="tg-phtq">0.977</td>
+      <td class="tg-phtq">0.989</td>
+      <td class="tg-phtq">0.609</td>
+      <td class="tg-phtq">0.914</td>
+      <td class="tg-phtq">0.937</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]DeepBlueAI</td>
+      <td class="tg-0pky">0.695</td>
+      <td class="tg-0pky">0.866</td>
+      <td class="tg-0pky">0.977</td>
+      <td class="tg-0pky">0.986</td>
+      <td class="tg-0pky">0.525</td>
+      <td class="tg-0pky">0.857</td>
+      <td class="tg-0pky">0.909</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[5]DelPro</td>
+      <td class="tg-phtq">0.691</td>
+      <td class="tg-phtq">0.847</td>
+      <td class="tg-phtq">0.986</td>
+      <td class="tg-phtq">0.986</td>
+      <td class="tg-phtq">0.535</td>
+      <td class="tg-phtq">0.891</td>
+      <td class="tg-phtq">0.949</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[6]SDL</td>
+      <td class="tg-0pky">0.672</td>
+      <td class="tg-0pky">0.860</td>
+      <td class="tg-0pky">0.949</td>
+      <td class="tg-0pky">0.969</td>
+      <td class="tg-0pky">0.484</td>
+      <td class="tg-0pky">0.783</td>
+      <td class="tg-0pky">0.874</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[7]AI-TIGER </td>
+      <td class="tg-phtq">0.665</td>
+      <td class="tg-phtq">0.848</td>
+      <td class="tg-phtq">0.949</td>
+      <td class="tg-phtq">0.963</td>
+      <td class="tg-phtq">0.482</td>
+      <td class="tg-phtq">0.783</td>
+      <td class="tg-phtq">0.869</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[9]NDWild</td>
+      <td class="tg-0pky">0.663</td>
+      <td class="tg-0pky">0.777</td>
+      <td class="tg-0pky">0.923</td>
+      <td class="tg-0pky">0.974</td>
+      <td class="tg-0pky">0.550</td>
+      <td class="tg-0pky">0.846</td>
+      <td class="tg-0pky">0.977</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[8]zdi</td>
+      <td class="tg-phtq">0.649</td>
+      <td class="tg-phtq">0.842</td>
+      <td class="tg-phtq">0.954</td>
+      <td class="tg-phtq">0.986</td>
+      <td class="tg-phtq">0.457</td>
+      <td class="tg-phtq">0.869</td>
+      <td class="tg-phtq">0.926</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[11]Batiary</td>
+      <td class="tg-0pky">0.636</td>
+      <td class="tg-0pky">0.766</td>
+      <td class="tg-0pky">0.923</td>
+      <td class="tg-0pky">0.980</td>
+      <td class="tg-0pky">0.506</td>
+      <td class="tg-0pky">0.823</td>
+      <td class="tg-0pky">0.960</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[10]pr </td>
+      <td class="tg-phtq">0.633</td>
+      <td class="tg-phtq">0.816</td>
+      <td class="tg-phtq">0.940</td>
+      <td class="tg-phtq">0.966</td>
+      <td class="tg-phtq">0.451</td>
+      <td class="tg-phtq">0.783</td>
+      <td class="tg-phtq">0.874</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[12]aaa</td>
+      <td class="tg-0pky">0.623</td>
+      <td class="tg-0pky">0.763</td>
+      <td class="tg-0pky">0.920</td>
+      <td class="tg-0pky">0.977</td>
+      <td class="tg-0pky">0.482</td>
+      <td class="tg-0pky">0.771</td>
+      <td class="tg-0pky">0.891</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC Triplet</td>
+      <td class="tg-phtq">0.598</td>
+      <td class="tg-phtq">0.714</td>
+      <td class="tg-phtq">0.866</td>
+      <td class="tg-phtq">0.954</td>
+      <td class="tg-phtq">0.481</td>
+      <td class="tg-phtq">0.794</td>
+      <td class="tg-phtq">0.937</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[14]DiKorsch</td>
+      <td class="tg-0pky">0.546</td>
+      <td class="tg-0pky">0.706</td>
+      <td class="tg-0pky">0.869</td>
+      <td class="tg-0pky">0.951</td>
+      <td class="tg-0pky">0.386</td>
+      <td class="tg-0pky">0.731</td>
+      <td class="tg-0pky">0.869</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[13]bagh</td>
+      <td class="tg-phtq">0.545</td>
+      <td class="tg-phtq">0.636</td>
+      <td class="tg-phtq">0.837</td>
+      <td class="tg-phtq">0.926</td>
+      <td class="tg-phtq">0.455</td>
+      <td class="tg-phtq">0.777</td>
+      <td class="tg-phtq">0.909</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[15]ThisIsMyTeam</td>
+      <td class="tg-0pky">0.532</td>
+      <td class="tg-0pky">0.674</td>
+      <td class="tg-0pky">0.860</td>
+      <td class="tg-0pky">0.969</td>
+      <td class="tg-0pky">0.390</td>
+      <td class="tg-0pky">0.834</td>
+      <td class="tg-0pky">0.914</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[16]cavs </td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+    </tr>
+  </table>
+
+  <table id="plain_private" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="8">Full Test</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq" rowspan="2">Team</td>
+      <td class="tg-48yq" title='(mAP_single+mAP_cross)/2' rowspan="2">mmAP</td>
+      <td class="tg-svo0" colspan="3">Single Cam</td>
+      <td class="tg-svo0" colspan="3">Cross Cam</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">0.816</td>
+      <td class="tg-phtq">0.906</td>
+      <td class="tg-phtq">0.977</td>
+      <td class="tg-phtq">0.991</td>
+      <td class="tg-phtq">0.726</td>
+      <td class="tg-phtq">0.936</td>
+      <td class="tg-phtq">0.967</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[2]BRL-RedPanda</td>
+      <td class="tg-0pky">0.770</td>
+      <td class="tg-0pky">0.898</td>
+      <td class="tg-0pky">0.966</td>
+      <td class="tg-0pky">0.977</td>
+      <td class="tg-0pky">0.643</td>
+      <td class="tg-0pky">0.913</td>
+      <td class="tg-0pky">0.958</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[3]NWPU_ASGO</td>
+      <td class="tg-phtq">0.751</td>
+      <td class="tg-phtq">0.879</td>
+      <td class="tg-phtq">0.969</td>
+      <td class="tg-phtq">0.983</td>
+      <td class="tg-phtq">0.622</td>
+      <td class="tg-phtq">0.925</td>
+      <td class="tg-phtq">0.951</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]DeepBlueAI</td>
+      <td class="tg-0pky">0.704</td>
+      <td class="tg-0pky">0.865</td>
+      <td class="tg-0pky">0.956</td>
+      <td class="tg-0pky">0.983</td>
+      <td class="tg-0pky">0.543</td>
+      <td class="tg-0pky">0.889</td>
+      <td class="tg-0pky">0.929</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[5]DelPro</td>
+      <td class="tg-phtq">0.696</td>
+      <td class="tg-phtq">0.836</td>
+      <td class="tg-phtq">0.973</td>
+      <td class="tg-phtq">0.981</td>
+      <td class="tg-phtq">0.556</td>
+      <td class="tg-phtq">0.872</td>
+      <td class="tg-phtq">0.948</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[6]SDL</td>
+      <td class="tg-0pky">0.672</td>
+      <td class="tg-0pky">0.857</td>
+      <td class="tg-0pky">0.940</td>
+      <td class="tg-0pky">0.960</td>
+      <td class="tg-0pky">0.488</td>
+      <td class="tg-0pky">0.783</td>
+      <td class="tg-0pky">0.867</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[7]AI-TIGER </td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[8]zdi</td>
+      <td class="tg-0pky">0.658</td>
+      <td class="tg-0pky">0.846</td>
+      <td class="tg-0pky">0.954</td>
+      <td class="tg-0pky">0.984</td>
+      <td class="tg-0pky">0.470</td>
+      <td class="tg-0pky">0.841</td>
+      <td class="tg-0pky">0.904</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[9]NDWild</td>
+      <td class="tg-phtq">0.658</td>
+      <td class="tg-phtq">0.763</td>
+      <td class="tg-phtq">0.907</td>
+      <td class="tg-phtq">0.967</td>
+      <td class="tg-phtq">0.553</td>
+      <td class="tg-phtq">0.851</td>
+      <td class="tg-phtq">0.944</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[10]pr </td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+      <td class="tg-0pky">-</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[11]Batiary</td>
+      <td class="tg-phtq">0.634</td>
+      <td class="tg-phtq">0.757</td>
+      <td class="tg-phtq">0.900</td>
+      <td class="tg-phtq">0.967</td>
+      <td class="tg-phtq">0.511</td>
+      <td class="tg-phtq">0.824</td>
+      <td class="tg-phtq">0.935</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[12]aaa</td>
+      <td class="tg-0pky">0.631</td>
+      <td class="tg-0pky">0.758</td>
+      <td class="tg-0pky">0.906</td>
+      <td class="tg-0pky">0.964</td>
+      <td class="tg-0pky">0.505</td>
+      <td class="tg-0pky">0.806</td>
+      <td class="tg-0pky">0.917</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC Triplet</td>
+      <td class="tg-phtq">0.592</td>
+      <td class="tg-phtq">0.713</td>
+      <td class="tg-phtq">0.866</td>
+      <td class="tg-phtq">0.960</td>
+      <td class="tg-phtq">0.471</td>
+      <td class="tg-phtq">0.775</td>
+      <td class="tg-phtq">0.905</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[13]bagh</td>
+      <td class="tg-0pky">0.549</td>
+      <td class="tg-0pky">0.650</td>
+      <td class="tg-0pky">0.852</td>
+      <td class="tg-0pky">0.942</td>
+      <td class="tg-0pky">0.448</td>
+      <td class="tg-0pky">0.769</td>
+      <td class="tg-0pky">0.900</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[14]DiKorsch</td>
+      <td class="tg-phtq">0.542</td>
+      <td class="tg-phtq">0.694</td>
+      <td class="tg-phtq">0.854</td>
+      <td class="tg-phtq">0.946</td>
+      <td class="tg-phtq">0.391</td>
+      <td class="tg-phtq">0.742</td>
+      <td class="tg-phtq">0.871</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[15]ThisIsMyTeam</td>
+      <td class="tg-0pky">0.537</td>
+      <td class="tg-0pky">0.682</td>
+      <td class="tg-0pky">0.869</td>
+      <td class="tg-0pky">0.967</td>
+      <td class="tg-0pky">0.392</td>
+      <td class="tg-0pky">0.811</td>
+      <td class="tg-0pky">0.914</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[16]cavs  </td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-phtq">-</td>
+    </tr>
+  </table>
+  <br>
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+  <table id='plain_team' class="tg">
+    <tr>
+      <th class="tg-lboi">Team</th>
+      <th class="tg-0pky">Members</th>
+      <th class="tg-lboi">Repo</th>
+      <th class="tg-lboi">Description</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">Cen Liu,<br>Lijun Guo(NBU),<br>Rong Zhang(NBU),<br>Wenchao Chang</td>
+      <td class="tg-48yq">https://github.com/LcenArthas/CWCV2019-Amur-Tiger-Re-ID</td>
+      <td class="tg-48yq">We introduce a novel triple-stream framework for the tiger Re-ID challenge, which consists of a full-image stream, a body-image stream and a limbs- image stream. Specifically, in the train stage, considering the missing and the errors of keypoint annotations, the body and limbs streams are used as regulators to guide the original full image stream in learning and aligning the local features. In the inference stage, we only use the learnt full image stream, which performs well with high efficiency and accuracy in the tiger Re-ID task, especially in the wild task (since it doesn’t need the pose estimation step).</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[2]BRL-RedPanda</td>
+      <td class="tg-0pky">Ning Liu,<br>Nan Zhang,<br>Xinhua Cheng,<br>Jianing Zhu,<br>Qijun Zhao</td>
+      <td class="tg-lboi">https://github.com/liuning-scu-cn/AmurTigerReID</td>
+      <td class="tg-lboi">Our solution uses SE-ResNet50 model as backbone which was pre-trained by ILSVRC. In addition, we design two complementary network branches to learn multiple discriminative features. We use multi-task learning strategy to supervise the model training. Finally, we fine-tune the model with triplet loss. The Re-ID results are obtained based on the fusion of the learned multiple features.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[3]NWPU_ASGO</td>
+      <td class="tg-phtq">Jiwen Yu,<br>Junnan Liu,<br>Zhizheng Yang,<br>Zhouyangzi Zhang,<br>Yixin Zhu,<br>Haibo Su,<br>Lu Yang,<br>Bingliang Jiao,<br>Peng Wang</td>
+      <td class="tg-48yq">https://github.com/vvictoryuki/tiger_reid_pytorch</td>
+      <td class="tg-48yq">We extract global features and local features of images on CNN, optimize these features with Triplet loss and id classification loss and apply several methods for data augmentation such as flip as new id, random whitening, random crop and so on. Besides, we proposed an example sampling strategy for training using hard negative mining. Finally, we ensemble our models with different backbones and epochs using imagenet pre-trained models (ResNet50, ResNet152, DenseNet161, DenseNet169, DenseNet201, DenseNet121) downloaded from pytorch.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[4]DeepBlueAI</td>
+      <td class="tg-0pky">Zhipeng Luo,<br>Feng Ni,<br>Zhenyu Xu,<br>Yuehan yao,<br>Bin Dong</td>
+      <td class="tg-lboi">https://github.com/John-Yao/CVWC2019_ReID</td>
+      <td class="tg-lboi">We chose posenet as the basic algorithm, and improved UNET,HRNET as our backbone and added spatial attentions to the downsampling layers to obtain more spatial information. Additional data augments are made to the data set to improve generalization ability. We use COCO pre-trained models.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[5]DelPro</td>
+      <td class="tg-phtq">Ankita Shukla(IIITD),<br>Gullal Singh Cheema(IIITD),<br>Connor Anderson(BYU),<br>Pei Gao(BYU),<br>Ryan Farrell(BYU),<br>Saket Anand(IIITD),<br>Divyam Anshumaan(IIITD)</td>
+      <td class="tg-48yq">https://github.com/FGVC/DelPro</td>
+      <td class="tg-48yq">We used pretrained DenseNet 121 on ImageNet dataset. The model is finetuned with a loss function defined on class probabilities of similar and dissimilar pairs along with the cross entropy loss and with a set of input transformations.<br>During testing, initial ranking is obtained based on similarities in the feature representation. Followed by using the left and right flank information obtained using key points and rearranging the ranking matrix with SIFT matching.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[6]SDL</td>
+      <td class="tg-0pky">Nan Jiang(UCAS),<br>Yuqi Gong(UCAS),<br>Xuehui Yu(UCAS),<br>Zhenjun Han(UCAS)</td>
+      <td class="tg-lboi">https://github.com/Vvfshadow/feature-aggregation</td>
+      <td class="tg-lboi">Our method is simple and straight-forward: we use ResNet-50 (pretrained on ImageNet) as backbone, and funetune it by using the given training dataset only. To effectively extract part features, we utilize two strategies: 1) uniformly partition in the feature maps; 2) use pose information to divide feature maps. During testing, we use two models for ensemble and adopt query expansion and rerank for post-processing.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[7]AI-TIGER</td>
+      <td class="tg-phtq">815719905@qq.com</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[8]zdi</td>
+      <td class="tg-0pky">Zonglin Di(TJU),<br>Bingchen Zhao(TJU)</td>
+      <td class="tg-lboi">https://github.com/ElegantLin/CVWC-2019</td>
+      <td class="tg-lboi">We train our reID model using ImageNet pretrained ResNet50 as backbone, add a BNNeck at the feature, combined with Warmup lr scheduler and random erasing data augmentation. Only global feature is used for our reID model, and no pose information is added.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[9]NDWild</td>
+      <td class="tg-phtq">Bryan (Ning) Xia(University of Notre Dame),<br>Prof. Christian Poellabauer(University of Notre Dame)</td>
+      <td class="tg-48yq">https://github.com/baxincs/ewan-reid</td>
+      <td class="tg-48yq">Our solution is based on the paper "Non-local Second-order Attention Networks for Person Re-identification”. The network architecture is modified based on ResNet50, therefore, we initialize our network with the pre-trained weights on ImageNet.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[10]pr</td>
+      <td class="tg-0pky">1007284540@qq.com</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[11]AlexNet in my heart/Batiary</td>
+      <td class="tg-phtq">Orest Kupyn(Ukrainian Catholic University),<br>Dzmitry Pranchuk(WANNABY),<br>Volodymyr Budzan</td>
+      <td class="tg-48yq">https://github.com/KupynOrest/AmurTigerCVWC</td>
+      <td class="tg-48yq">For this task we use custom architecture with SE-ResNext backbone. The last layers and loss function are taken from CosFace - https://arxiv.org/abs/1801.09414 paper. (BN-&gt;Droput-&gt;BN1d-&gt;Dense) . The Dense layer output the final embedding of size = 2048. We use Large Margin Cosine Loss to train the net to distinguish between different tigers. For Re-ID we compute Cosine Distance between embeddings and rank them accordingly. The final submit is an ensemble of 4 models train of different splits/augmentations. The ensemble is based on majority voting.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[12]aaa</td>
+      <td class="tg-0pky">gullalcheema@gmail.com<br>ashukl20@asu.edu</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[13]bagh</td>
+      <td class="tg-phtq">-</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq"></td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[14]DiKorsch</td>
+      <td class="tg-0pky">dimitri.korsch@uni-jena.de</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[15]ThisIsMyTeam</td>
+      <td class="tg-phtq">korschdima@gmail.com</td>
+      <td class="tg-48yq"></td>
+      <td class="tg-48yq">No Response</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[16]cavs</td>
+      <td class="tg-0pky">christopher_my@163.com</td>
+      <td class="tg-lboi"></td>
+      <td class="tg-lboi">No Response</td>
+    </tr>
+  </table>
+</div>
+
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-svo0{background-color:#D2E4FC;border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+
+<div id="wild" style="display:none" class="board">
+  <table id="wild_public" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="8">Test-dev</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq" rowspan="2">Team</td>
+      <td class="tg-48yq" title='(mAP_single+mAP_cross)/2' rowspan="2">mmAP</td>
+      <td class="tg-svo0" colspan="3">Single Cam</td>
+      <td class="tg-svo0" colspan="3">Cross Cam</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">0.805</td>
+      <td class="tg-phtq">0.880</td>
+      <td class="tg-phtq">0.962</td>
+      <td class="tg-phtq">0.973</td>
+      <td class="tg-phtq">0.729</td>
+      <td class="tg-phtq">0.914</td>
+      <td class="tg-phtq">0.953</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[2]DeepBlueAI</td>
+      <td class="tg-0pky">0.690</td>
+      <td class="tg-0pky">0.841</td>
+      <td class="tg-0pky">0.944</td>
+      <td class="tg-0pky">0.964</td>
+      <td class="tg-0pky">0.539</td>
+      <td class="tg-0pky">0.893</td>
+      <td class="tg-0pky">0.930</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[3]Batiary</td>
+      <td class="tg-phtq">0.663</td>
+      <td class="tg-phtq">0.785</td>
+      <td class="tg-phtq">0.896</td>
+      <td class="tg-phtq">0.960</td>
+      <td class="tg-phtq">0.540</td>
+      <td class="tg-phtq">0.844</td>
+      <td class="tg-phtq">0.930</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]zdi</td>
+      <td class="tg-0pky">0.640</td>
+      <td class="tg-0pky">0.820</td>
+      <td class="tg-0pky">0.931</td>
+      <td class="tg-0pky">0.958</td>
+      <td class="tg-0pky">0.459</td>
+      <td class="tg-0pky">0.838</td>
+      <td class="tg-0pky">0.904</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC Baseline</td>
+      <td class="tg-phtq">0.586</td>
+      <td class="tg-phtq">0.711</td>
+      <td class="tg-phtq">0.835</td>
+      <td class="tg-phtq">0.902</td>
+      <td class="tg-phtq">0.461</td>
+      <td class="tg-phtq">0.766</td>
+      <td class="tg-phtq">0.886</td>
+    </tr>
+  </table>
+
+  <table id="wild_private" class="tg">
+    <tr>
+      <th class="tg-c3ow" colspan="8">Full Test</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq" rowspan="2">Team</td>
+      <td class="tg-48yq" title='(mAP_single+mAP_cross)/2' rowspan="2">mmAP</td>
+      <td class="tg-svo0" colspan="3">Single Cam</td>
+      <td class="tg-svo0" colspan="3">Cross Cam</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+      <td class="tg-0pky">mAP</td>
+      <td class="tg-0pky">top-1</td>
+      <td class="tg-0pky">top-5</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">0.807</td>
+      <td class="tg-phtq">0.889</td>
+      <td class="tg-phtq">0.956</td>
+      <td class="tg-phtq">0.974</td>
+      <td class="tg-phtq">0.724</td>
+      <td class="tg-phtq">0.929</td>
+      <td class="tg-phtq">0.956</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[2]DeepBlueAI</td>
+      <td class="tg-0pky">0.696</td>
+      <td class="tg-0pky">0.845</td>
+      <td class="tg-0pky">0.944</td>
+      <td class="tg-0pky">0.967</td>
+      <td class="tg-0pky">0.548</td>
+      <td class="tg-0pky">0.908</td>
+      <td class="tg-0pky">0.941</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">[3]Batiary</td>
+      <td class="tg-phtq">0.666</td>
+      <td class="tg-phtq">0.789</td>
+      <td class="tg-phtq">0.909</td>
+      <td class="tg-phtq">0.959</td>
+      <td class="tg-phtq">0.543</td>
+      <td class="tg-phtq">0.856</td>
+      <td class="tg-phtq">0.942</td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">[4]zdi</td>
+      <td class="tg-0pky">0.644</td>
+      <td class="tg-0pky">0.823</td>
+      <td class="tg-0pky">0.932</td>
+      <td class="tg-0pky">0.967</td>
+      <td class="tg-0pky">0.465</td>
+      <td class="tg-0pky">0.849</td>
+      <td class="tg-0pky">0.910</td>
+    </tr>
+    <tr>
+      <td class="tg-phtq">CVWC Baseline</td>
+      <td class="tg-phtq">0.582</td>
+      <td class="tg-phtq">0.703</td>
+      <td class="tg-phtq">0.827</td>
+      <td class="tg-phtq">0.907</td>
+      <td class="tg-phtq">0.460</td>
+      <td class="tg-phtq">0.778</td>
+      <td class="tg-phtq">0.882</td>
+    </tr>
+  </table>
+  <br>
+
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color: #204e80;}
+    .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-48yq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:middle}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
+  <table id="wild_team" class="tg">
+    <tr>
+      <th class="tg-lboi">Team</th>
+      <th class="tg-0pky">Members</th>
+      <th class="tg-lboi">Repo</th>
+      <th class="tg-lboi">Description</th>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[1]Bestfitting_NBU</td>
+      <td class="tg-phtq">Cen Liu, Lijun Guo(NBU), Rong Zhang(NBU), Wenchao Chang</td>
+      <td class="tg-48yq">https://github.com/LcenArthas/CWCV2019-Amur-Tiger-Re-ID</td>
+      <td class="tg-48yq">We use the Mask RCNN_50ResNet as the detector and use the proposed network in the plain Re-ID task as tracker for the wild re-id task. <br>Especially,  our method does not need keypoint information in the inference stage and is more suitable for the wild Re_id task.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[2]DeepBlueAI</td>
+      <td class="tg-0pky">Zhipeng Luo,<br>Feng Ni,<br>Zhenyu Xu,<br>Yuehan yao,<br>Bin Dong</td>
+      <td class="tg-lboi">https://github.com/John-Yao/CVWC2019_ReID</td>
+      <td class="tg-lboi">Without preprocessing of data, we build a ReID model base on global features and batch hard mining triplet loss.<br>More details, some training tricks are used, including warmup,random erasing,centerloss and etc.<br>For post-process, we use multi-scales augmentation and reranking. We use COCO pre-trained models.</td>
+    </tr>
+    <tr>
+      <td class="tg-48yq">[3]AlexNet in my heart/Batiary</td>
+      <td class="tg-phtq">Orest Kupyn(Ukrainian Catholic University),<br>Dzmitry Pranchuk(WANNABY),<br>Volodymyr Budzan</td>
+      <td class="tg-48yq">https://github.com/KupynOrest/AmurTigerCVWC</td>
+      <td class="tg-48yq">For this task we use custom architecture with SE-ResNext backbone. The last layers and loss function are taken from CosFace - https://arxiv.org/abs/1801.09414 paper. (BN-&gt;Droput-&gt;BN1d-&gt;Dense) . The Dense layer output the final embedding of size = 2048. We use Large Margin Cosine Loss to train the net to distinguish between different tigers. For Re-ID we compute Cosine Distance between embeddings and rank them accordingly. The final submit is an ensemble of 4 models train of different splits/augmentations. The ensemble is based on majority voting.</td>
+    </tr>
+    <tr>
+      <td class="tg-lboi">[4]zdi</td>
+      <td class="tg-0pky">Zonglin Di(TJU),<br>Bingchen Zhao(TJU)</td>
+      <td class="tg-lboi">https://github.com/ElegantLin/CVWC-2019</td>
+      <td class="tg-lboi">For wild ReID track, We choose our best detection submit as reID gallery, crop the bounding boxes from the images and perform reID. The following steps are similar to those in Plain reID Track.</td>
+    </tr>
+  </table>
+</div>
+
+<script type="text/javascript">
+  $('#det_btn').click(()=>{
+    $('#detect').show()
+    $('#pose').hide()
+    $('#plain').hide()
+    $('#wild').hide()
+    $('#det_btn')[0].disabled=true
+    $('#pose_btn')[0].disabled=false
+    $('#plain_btn')[0].disabled=false
+    $('#wild_btn')[0].disabled=false
+  })
+  $('#pose_btn').click(()=>{
+    $('#detect').hide()
+    $('#pose').show()
+    $('#plain').hide()
+    $('#wild').hide()
+    $('#det_btn')[0].disabled=false
+    $('#pose_btn')[0].disabled=true
+    $('#plain_btn')[0].disabled=false
+    $('#wild_btn')[0].disabled=false
+  })
+  $('#plain_btn').click(()=>{
+    $('#detect').hide()
+    $('#pose').hide()
+    $('#plain').show()
+    $('#wild').hide()
+    $('#det_btn')[0].disabled=false
+    $('#pose_btn')[0].disabled=false
+    $('#plain_btn')[0].disabled=true
+    $('#wild_btn')[0].disabled=false
+  })
+  $('#wild_btn').click(()=>{
+    $('#detect').hide()
+    $('#pose').hide()
+    $('#plain').hide()
+    $('#wild').show()
+    $('#det_btn')[0].disabled=false
+    $('#pose_btn')[0].disabled=false
+    $('#plain_btn')[0].disabled=false
+    $('#wild_btn')[0].disabled=true
+  })
+  $('#det_btn').click()
+</script>
+
+</body>
+</html>
